@@ -24,7 +24,7 @@ O banco utiliza cores quentes: Como cor primaria: Orange: que em seu codigo hexa
 e na sua paleta temos a seguinte cor: 
 ---------------------------------------------------------------------------------------------------------------------
 ******BACKGROUND OPTIONS
-#:   #FF981E;
+#:   #FF981E; -> VARIANT PRINCIPAL: (#FF914C);
 ##:  rgb(255, 80, 53);
 ##:  #FFFFFF (branco)
 
