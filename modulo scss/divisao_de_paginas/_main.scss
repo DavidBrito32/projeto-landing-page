@@ -1,0 +1,308 @@
+main {
+  width: 100%;
+  overflow-x: hidden;
+
+    .banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    padding: 0 80px;
+    background-color: #031220;
+    border-radius: 12px;
+    box-shadow: 10px 1px 40px #ffffff6e;
+    overflow-x: hidden;
+
+    .texto {
+      width: 53%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        text-align: left;
+        letter-spacing: 2px;
+        font-size: 60px;
+        background-image: linear-gradient(
+          to right, #1f5f61,
+          #ff914c,
+          green
+        );
+        color: transparent;
+        -webkit-background-clip: text;
+      }
+    }
+
+    .imagem {
+      width: 650px;
+      height: 650px;
+      background-color: #8b911a35;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      top: 0px;
+      animation-name: background;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      img {
+        display: block;
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        box-shadow: 1px 1px 55px #5b0465;
+        backdrop-filter: blur(20px);
+        animation-name: background;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+    }
+    }
+
+    .servicos{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-image: url('../../images/models/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: 1px 20px 15px #f6a50476;
+
+        .imagem{
+            width: 45%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 28px;
+            background: linear-gradient(to bottom, #8c630a8b, #c6d39489);
+            box-shadow: 1px 20px 30px black;
+
+            h1{
+                width: 50%;
+                letter-spacing: 2px;
+                font-size: 28px;
+                background-image: linear-gradient(
+                to right, rgb(77, 215, 2), white
+                );
+                color: transparent;
+                -webkit-background-clip: text;
+                position: absolute;
+                right: 20px;
+                top: 95px;
+            }
+
+                img{
+                    display: block;
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 28px;
+                    position: absolute;
+                    left: 40px;
+                    top: 30px;
+                    box-shadow: 10px 5px 20px #ffffff3d;     
+                    box-shadow: 1px 20px 30px black;                   
+                }
+
+                .imagem2{
+                    position: absolute;
+                    top: 320px;
+                    left: 60%;
+                }
+
+                .empresas{
+                    width: 40%;
+                    left: 100px;
+                    top: 420px;
+
+                    color: black;
+                }
+
+        }
+
+        .pagamentos{
+            width: 350px;
+            height: 350px;
+            border-radius: 28px;
+            box-shadow: 1px 20px 30px black;
+
+                img{
+                    width: 100%;
+                    border-radius: 28px;
+                }
+        }
+
+        .app{
+            width: 350px;
+            height: 350px;
+            border-radius: 28px;
+            box-shadow: 1px 20px 30px black;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 28px;
+            }
+        }
+     }
+
+    .formulario{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2b222c;
+    position: relative;
+
+            .beneficions{
+                padding: 20px;
+                width: 90%;
+                height: 70%;
+                background-color: #58302683;
+                border-radius: 28px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .examples{
+                    width: 620px;
+                    height: 620px;
+                    position: relative;
+                    h1{
+                        text-align: center;
+                        font-size: 36px;
+                        color: #ffffff;
+                        position: absolute;
+                    }
+
+                        img{
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 28px;
+                            box-shadow: 1px 10px 30px 10px #43223c;
+                        }
+
+                }
+
+                    a{
+                        color: white;
+                        font-size: 1.4rem;
+                        line-height: 50px;
+
+                            &:hover{
+                                color: darkgreen;
+                            }
+                    }
+            }
+
+            form{
+                width: 500px;
+                height: 600px;
+                border-radius: 28px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                background-color: #383939;
+                border: 3px dashed #991818;
+                box-shadow: 1px 10px 30px black;
+
+                    h1{
+                        width: 100%;
+                        font-size: 26px;
+                        text-align: center;
+                        line-height: 38px;
+                    }
+
+                    input{
+                        width: 95%;
+                        margin: 0 auto;
+                        height: 50px;
+                        line-height: 50px;
+                        border-radius: 8px;
+                        background-color: rgb(98, 93, 93);
+                        padding-left: 20px;
+                        color: white;
+                        outline: none;
+                        border: none;
+                            &::placeholder{
+                                color: black;
+                            }
+                            &:focus{
+                                background-color: gray;
+                            }
+                    }
+
+                    textarea{
+                        width: 95%;
+                        margin: 0 auto;
+                        border-radius: 8px;
+                        background-color: rgb(98, 93, 93);
+                        outline: none;
+                        padding-left: 20px;
+                        padding-top: 10px;
+
+                        &::placeholder{
+                            color: black;
+                        }
+                        &:focus{
+                            background-color: gray;
+                        }
+                    }
+
+                    label{
+                        display: block;
+                        margin: 0 auto 0 20px;
+                    }
+
+                    button{
+                        width: 95%;
+                        margin: 0 auto;
+                        height: 50px;
+                        line-height: 50px;
+                        border-radius: 12px;
+                        background-color: #5b0465;
+                        color: white;
+                        font-weight: bold;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                    }
+            }
+     }
+}
+
+
+@keyframes background {
+    0%{
+        background-color: #031220a2;
+    }
+    50%{
+        background-color: #5b04657a;
+        box-shadow: 1px 1px 50px rgb(236, 143, 233);
+    }
+    100%{
+        background-color: #031220a2;
+    }
+}
