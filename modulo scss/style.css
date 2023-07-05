@@ -454,6 +454,7 @@ footer .direitos p {
   }
   header .logo {
     width: 30%;
+    overflow: hidden;
   }
   header .logo img {
     width: 100%;
@@ -503,24 +504,31 @@ footer .direitos p {
     box-sizing: border-box;
   }
   main .banner {
-    overflow-x: hidden;
+    width: 100vw;
     box-shadow: none;
     border-radius: 0;
     height: 550px;
     background-color: #051d26;
+    position: relative;
   }
   main .banner .texto {
     width: 100%;
-    height: 260px;
+    height: 280px;
+    position: absolute;
+    top: -20px;
+    left: 1em;
+    margin: 0 auto;
   }
   main .banner .texto h1 {
     width: 100%;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   main .banner .imagem {
-    overflow: hidden;
-    width: 250px;
-    height: 12rem;
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    left: 1em;
+    top: 40%;
   }
   main .servicos {
     width: 100%;
@@ -547,24 +555,23 @@ footer .direitos p {
     -webkit-background-clip: text;
     position: absolute;
     right: 0.6rem;
-    top: 10px;
+    top: 5px;
     text-align: left;
   }
   main .servicos .imagem img {
     display: block;
-    width: 9rem;
-    height: 9rem;
+    width: 8.5rem;
+    height: 8.5rem;
     border-radius: 28px;
     position: absolute;
-    left: 10px;
+    left: 15px;
     top: 0px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
+    box-shadow: 10px 5px 20px #034325;
   }
   main .servicos .imagem .imagem2 {
     position: absolute;
     top: 140px;
-    left: 50%;
+    left: 53%;
   }
   main .servicos .imagem .empresas {
     width: 8rem;
@@ -573,41 +580,43 @@ footer .direitos p {
     color: rgb(255, 251, 251);
     position: absolute;
     left: 2rem;
-    top: 170px;
+    top: 175px;
     text-align: left;
     text-transform: uppercase;
   }
   main .servicos .pagamentos {
     width: 100%;
-    height: 10em;
+    height: 35vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    top: -45px;
+    top: 5px;
   }
   main .servicos .pagamentos img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .servicos .app {
     width: 100%;
-    height: 20em;
+    height: 40vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    bottom: -50px;
+    bottom: 0px;
   }
   main .servicos .app img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .formulario {
-    height: 850px;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     padding: 0;
     margin: 0;
@@ -615,9 +624,9 @@ footer .direitos p {
     background-color: black;
   }
   main .formulario .beneficions {
+    height: 300px;
     padding: 20px;
     width: 100%;
-    height: 100%;
     background-color: black;
     border-radius: 28px;
     display: flex;
@@ -626,7 +635,7 @@ footer .direitos p {
     align-items: center;
   }
   main .formulario .beneficions .examples {
-    width: 300px;
+    width: 100%;
     position: relative;
   }
   main .formulario .beneficions .examples h1 {
@@ -652,8 +661,8 @@ footer .direitos p {
     color: darkgreen;
   }
   main .formulario form {
-    width: 320px;
-    height: 500px;
+    width: 100%;
+    height: 465px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -665,15 +674,15 @@ footer .direitos p {
   }
   main .formulario form h1 {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
-    line-height: 38px;
+    height: auto;
   }
   main .formulario form input {
     width: 100%;
     margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
     padding-left: 20px;
@@ -692,6 +701,7 @@ footer .direitos p {
   }
   main .formulario form textarea {
     width: 100%;
+    height: 100px;
     margin: 0 auto;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
@@ -710,8 +720,7 @@ footer .direitos p {
   }
   main .formulario form label {
     display: block;
-    margin: 0 auto 0 20px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   main .formulario form button {
     width: 95%;
@@ -729,24 +738,25 @@ footer .direitos p {
   footer {
     max-width: 100vw;
     box-sizing: border-box;
-    height: 550px;
+    height: 400px;
     position: relative;
     overflow-x: hidden;
   }
   footer .social {
     width: 100%;
-    height: 50px;
+    height: 60px;
+    border: 2px solid blue;
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     position: absolute;
-    top: 170px;
+    top: 160px;
   }
   footer .social a:hover {
     transition-duration: 400ms;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   footer .social a:hover .azul {
     transition-duration: 400ms;
@@ -772,10 +782,10 @@ footer .direitos p {
   }
   footer .endereco a {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   footer .endereco a i {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgb(255, 128, 0);
   }
   footer .endereco a:hover {
@@ -786,7 +796,7 @@ footer .direitos p {
   footer .logoRodape {
     width: 100%;
     box-sizing: border-box;
-    height: 130px;
+    height: 120px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -796,7 +806,7 @@ footer .direitos p {
     position: absolute;
     display: block;
     width: 35%;
-    height: 100%;
+    height: 90%;
     border-radius: 50%;
     top: 0px;
     margin: 10px auto;
