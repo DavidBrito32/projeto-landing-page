@@ -1,11 +1,12 @@
 header{
-    width: 100%;
+    width: 100vw;
     height: 13vh;
     background: linear-gradient(to right, #FF914C, #e79128,);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
     padding: 0 80px;
 
         .logo{
@@ -31,7 +32,7 @@ header{
     overflow-x: hidden;
         .barra{
             display: block;
-            width: 100%;
+            width: 80%;
             height: 4px;
             background-color: black;
             border-radius: 20%;
@@ -39,7 +40,7 @@ header{
 }
 
 .ativo{
-    overflow: hidden;
+    overflow-x: hidden;
 
     span:nth-child(1){
         display: none;
@@ -47,17 +48,17 @@ header{
 
     span:nth-child(2){
         position: absolute;
-        width: 50px;
-        top: 50px;
-        right: 0;
+        width: 30px;
+        top: 40px;
+        right: 20px;
         transform: rotate(45deg);
     }
 
     span:nth-child(3){
         position: absolute;
-        width: 50px;
-        top: 50px;
-        right: 0;
+        width: 30px;
+        top: 40px;
+        right: 20px;
         transform: rotate(-45deg);
     }
 }
