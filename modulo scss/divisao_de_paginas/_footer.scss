@@ -6,13 +6,13 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     color: white;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 
     .social{
         width: 350px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
             a{
@@ -67,35 +67,34 @@ footer{
         }
     
         .logoRodape{
-            width: 400px;
+            width: 200px;
             box-sizing: border-box;
             height: 110px;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding-left: 80px;
     
                 img{
-                    margin: 40px auto;
                     display: block;
-                    width: 35%;
-                    height: 100%;
+                    width: 85%;
+                    height: 80%;
                     border-radius: 50%;
+                    margin: 0 auto;
                 }
         }
 
         .direitos{
             width: 100%;
             text-align: center;
-            display: block;
-            border: 1px solid wheat;
-            
+            display: block;            
                 p{
                     font-size: 1.5rem;
                 }
         }
 
 
-    }
+}
 
 
 

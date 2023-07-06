@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&display=swap");
 header {
-  width: 100%;
+  width: 100vw;
   height: 13vh;
   background: linear-gradient(to right, #FF914C, #e79128);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   padding: 0 80px;
   /*------------------------------------------------------------CONFIGURACAO DO MENU HAMBURGUER--------------------------------------------------------*/
   /*-----------------------------------------------------------------CONFIGURACAO DA NAVBAR-----------------------------------------------------------------*/
@@ -15,9 +16,10 @@ header .logo {
   width: 300px;
   height: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 header .logo img {
-  width: 60%;
+  width: 50%;
   height: 100%;
 }
 header .hamburguer {
@@ -33,29 +35,29 @@ header .hamburguer {
 }
 header .hamburguer .barra {
   display: block;
-  width: 100%;
+  width: 80%;
   height: 4px;
   background-color: black;
   border-radius: 20%;
 }
 header .ativo {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 header .ativo span:nth-child(1) {
   display: none;
 }
 header .ativo span:nth-child(2) {
   position: absolute;
-  width: 50px;
-  top: 50px;
-  right: 0;
+  width: 30px;
+  top: 40px;
+  right: 20px;
   transform: rotate(45deg);
 }
 header .ativo span:nth-child(3) {
   position: absolute;
-  width: 50px;
-  top: 50px;
-  right: 0;
+  width: 30px;
+  top: 40px;
+  right: 20px;
   transform: rotate(-45deg);
 }
 header nav {
@@ -86,7 +88,7 @@ main .banner {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60%;
+  height: 100vh;
   padding: 0 80px;
   background-color: #031220;
   border-radius: 12px;
@@ -105,7 +107,7 @@ main .banner .texto h1 {
   text-align: left;
   letter-spacing: 2px;
   font-size: 60px;
-  background-image: linear-gradient(to right, #1f5f61, #ff914c, green);
+  background-image: linear-gradient(40deg, #da862d, #e54c6f, rgb(128, 0, 51));
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -204,8 +206,32 @@ main .servicos .pagamentos {
   height: 350px;
   border-radius: 28px;
   box-shadow: 1px 20px 30px black;
+  overflow: hidden;
+}
+main .servicos .pagamentos a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+main .servicos .pagamentos a::after {
+  content: "";
+  width: 150%;
+  height: 20%;
+  position: absolute;
+  left: -150%;
+  top: 30%;
+  background-color: rgba(255, 255, 255, 0.5294117647);
+  transform: skewY(45deg);
+  transition-duration: 0.8s;
+}
+main .servicos .pagamentos a:hover::after {
+  left: 100%;
 }
 main .servicos .pagamentos img {
+  display: block;
+  margin: 0 auto;
   width: 100%;
   border-radius: 28px;
 }
@@ -215,9 +241,30 @@ main .servicos .app {
   border-radius: 28px;
   box-shadow: 1px 20px 30px black;
 }
-main .servicos .app img {
+main .servicos .app a {
+  position: relative;
   width: 100%;
   height: 100%;
+  display: block;
+  overflow: hidden;
+}
+main .servicos .app a::after {
+  content: "";
+  width: 150%;
+  height: 20%;
+  position: absolute;
+  left: -150%;
+  top: 30%;
+  background-color: rgba(246, 255, 0, 0.5294117647);
+  transform: skewY(45deg);
+  transition-duration: 0.8s;
+}
+main .servicos .app a:hover::after {
+  left: 100%;
+}
+main .servicos .app img {
+  display: block;
+  width: 100%;
   border-radius: 28px;
 }
 main .formulario {
@@ -232,18 +279,20 @@ main .formulario {
 }
 main .formulario .beneficions {
   padding: 20px;
-  width: 90%;
+  width: 100%;
   height: 70%;
   background-color: rgba(88, 48, 38, 0.5137254902);
   border-radius: 28px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 main .formulario .beneficions .examples {
   width: 620px;
   height: 620px;
-  position: relative;
+  position: absolute;
+  left: 250px;
 }
 main .formulario .beneficions .examples h1 {
   text-align: center;
@@ -278,12 +327,14 @@ main .formulario form {
   background-color: #383939;
   border: 3px dashed #991818;
   box-shadow: 1px 10px 30px black;
+  position: absolute;
+  right: 250px;
 }
 main .formulario form h1 {
   width: 100%;
-  font-size: 26px;
   text-align: center;
-  line-height: 38px;
+  font-size: 1.5rem;
+  height: 50px;
 }
 main .formulario form input {
   width: 95%;
@@ -326,12 +377,12 @@ main .formulario form textarea:focus {
 }
 main .formulario form label {
   display: block;
-  margin: 0 auto 0 20px;
+  height: 25px;
 }
 main .formulario form button {
   width: 95%;
   margin: 0 auto;
-  height: 50px;
+  height: 60px;
   line-height: 50px;
   border-radius: 12px;
   background-color: #5b0465;
@@ -346,9 +397,9 @@ main .formulario form button {
   0% {
     background-color: rgba(3, 18, 32, 0.6352941176);
   }
-  50% {
-    background-color: rgba(91, 4, 101, 0.4784313725);
-    box-shadow: 1px 1px 50px rgb(236, 143, 233);
+  60% {
+    background-color: rgba(225, 155, 4, 0.4784313725);
+    box-shadow: 1px 1px 50px rgb(197, 2, 63);
   }
   100% {
     background-color: rgba(3, 18, 32, 0.6352941176);
@@ -362,13 +413,13 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 footer .social {
   width: 350px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 footer .social a:hover {
@@ -411,506 +462,49 @@ footer .endereco a:hover {
   color: green;
 }
 footer .logoRodape {
-  width: 400px;
+  width: 200px;
   box-sizing: border-box;
   height: 110px;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-left: 80px;
 }
 footer .logoRodape img {
-  margin: 40px auto;
   display: block;
-  width: 35%;
-  height: 100%;
+  width: 85%;
+  height: 80%;
   border-radius: 50%;
+  margin: 0 auto;
 }
 footer .direitos {
   width: 100%;
   text-align: center;
   display: block;
-  border: 1px solid wheat;
 }
 footer .direitos p {
   font-size: 1.5rem;
 }
 
-/*--------------------------RESPONSIVIDADE GERAL----------------------------------*/
-@media (min-width: 320px) and (max-width: 480px) {
+/*--------------------------RESPONSIVIDADE EM TELAS----------------------------------*/
+@media (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
   header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     background: #e79128;
-    padding: 0 10px;
     transition-duration: 1s;
-  }
-  header .logo {
-    width: 50%;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-  }
-  header nav {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #7c7678;
-    left: 0;
-    top: 13vh;
-    text-align: center;
     box-sizing: border-box;
-  }
-  header nav a {
-    color: black;
-    font-size: 2.3rem;
-  }
-  header nav ul {
-    margin-top: 10%;
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-  }
-  header nav ul li {
-    border: 1px solid blue;
-  }
-  header .active {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-    z-index: 10000;
-  }
-  main {
-    transition-duration: 1s;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  main .banner {
-    overflow-x: hidden;
-    box-shadow: none;
-    border-radius: 0;
-    height: 450px;
-    background-color: #051d26;
-  }
-  main .banner .texto {
-    width: 100%;
-    height: 160px;
-  }
-  main .banner .texto h1 {
-    width: 15em;
-    font-size: 1.2em;
-  }
-  main .banner .imagem {
-    width: 23rem;
-    height: 15rem;
-  }
-  main .servicos {
-    width: 100%;
-    height: 1150px;
-    background: black;
-  }
-  main .servicos .imagem {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0;
-    background: rgb(6, 6, 6);
-    box-shadow: none;
-  }
-  main .servicos .imagem h1 {
-    width: 8rem;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    background-image: linear-gradient(to right, rgb(215, 194, 2), white);
-    color: transparent;
-    -webkit-background-clip: text;
-    position: absolute;
-    right: 0.6rem;
-    top: 10px;
-    text-align: left;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 28px;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 140px;
-    left: 50%;
-  }
-  main .servicos .imagem .empresas {
-    width: 8rem;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    color: rgb(255, 251, 251);
-    position: absolute;
-    left: 2rem;
-    top: 170px;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  main .servicos .pagamentos {
-    width: 100%;
-    height: 10em;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    top: -45px;
-  }
-  main .servicos .pagamentos img {
-    width: 90%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .servicos .app {
-    width: 100%;
-    height: 20em;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    bottom: -50px;
-  }
-  main .servicos .app img {
-    width: 90%;
-    height: 90%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .formulario {
-    height: 850px;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    gap: 0;
-    background-color: black;
-  }
-  main .formulario .beneficions {
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main .formulario .beneficions .examples {
-    width: 300px;
-    position: relative;
-  }
-  main .formulario .beneficions .examples h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #ffffff;
-    position: absolute;
-  }
-  main .formulario .beneficions .examples img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    box-shadow: none;
-  }
-  main .formulario .beneficions a {
-    color: white;
-    font-size: 1.4rem;
-    line-height: 50px;
-  }
-  main .formulario .beneficions a:hover {
-    color: darkgreen;
-  }
-  main .formulario form {
-    width: 320px;
-    height: 500px;
-    border-radius: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #383939;
-    border: none;
-    position: relative;
-    top: 15px;
-  }
-  main .formulario form h1 {
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    line-height: 38px;
-  }
-  main .formulario form input {
-    width: 100%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    padding-left: 20px;
-    color: white;
-    outline: none;
-    border: none;
-  }
-  main .formulario form input::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form input::placeholder {
-    color: black;
-  }
-  main .formulario form input:focus {
-    background-color: gray;
-  }
-  main .formulario form textarea {
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    outline: none;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-  main .formulario form textarea::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form textarea::placeholder {
-    color: black;
-  }
-  main .formulario form textarea:focus {
-    background-color: gray;
-  }
-  main .formulario form label {
-    display: block;
-    margin: 0 auto 0 20px;
-    font-size: 1rem;
-  }
-  main .formulario form button {
-    width: 95%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 12px;
-    background-color: #5b0465;
-    color: white;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  footer {
-    width: 100%;
-    height: 550px;
-    position: relative;
-  }
-  footer .social {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 40px;
-    justify-content: center;
-    align-items: baseline;
-    position: absolute;
-    top: 170px;
-  }
-  footer .social a:hover {
-    transition-duration: 400ms;
-    transform: scale(1.2);
-  }
-  footer .social a:hover .azul {
-    transition-duration: 400ms;
-    color: #00bfff;
-  }
-  footer .social a:hover .azulF {
-    transition-duration: 400ms;
-    color: #3b5998;
-  }
-  footer .social a:hover .inst {
-    color: #f32a4b;
-  }
-  footer .social a i {
-    color: white;
-    font-size: 2.5rem;
-  }
-  footer .endereco {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  footer .endereco a {
-    color: white;
-    font-size: 1.7rem;
-  }
-  footer .endereco a i {
-    font-size: 1.7rem;
-    color: rgb(255, 128, 0);
-  }
-  footer .endereco a:hover {
-    transition-duration: 600ms;
-    text-decoration: underline;
-    color: green;
-  }
-  footer .logoRodape {
-    width: 100%;
-    box-sizing: border-box;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-  }
-  footer .logoRodape img {
-    position: absolute;
-    display: block;
-    width: 35%;
-    height: 100%;
-    border-radius: 50%;
-    top: 0px;
-    margin: 10px auto;
-  }
-  footer .direitos {
-    width: 100%;
-    text-align: center;
-    display: block;
-    border: none;
-  }
-  footer .direitos p {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 900px) {
-  /* tablets */
-  header {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    padding: 0 10px;
-    transition-duration: 1s;
-    overflow: hidden;
   }
   header .logo {
     width: 30%;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-  }
-  header nav {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #7c7678;
-    left: 0;
-    top: 13vh;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  header nav a {
-    color: black;
-    font-size: 2.3rem;
-  }
-  header nav ul {
-    margin-top: 10%;
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.3rem;
-  }
-  header nav ul li {
-    border: 1px solid blue;
-  }
-  header .active {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-    z-index: 10000;
-  }
-}
-@media (min-width: 901px) and (max-width: 1248px) {
-  header {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    padding: 0 10px;
-    transition-duration: 1s;
     overflow: hidden;
-  }
-  header .logo {
-    width: 20%;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 1s;
-  }
-  header nav {
-    width: 500px;
-    visibility: visible;
-    opacity: 1;
-    padding: 0;
-    left: 0;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  header nav a {
-    color: white;
-    font-size: 1.4rem;
-  }
-  header nav ul {
-    display: flex;
-    font-size: 1.3rem;
-  }
-}
-/*--------------------------------------------------------------------------------*/
-/*--------------------------SOMENTE TELAS-----------------------------------------*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* celulares */
-  header {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    padding: 0 10px;
-    transition-duration: 1s;
-  }
-  header .logo {
-    width: 50%;
   }
   header .logo img {
     width: 100%;
@@ -927,60 +521,71 @@ footer .direitos p {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #7c7678;
+    background-color: #3b212a;
     left: 0;
     top: 13vh;
     text-align: center;
     box-sizing: border-box;
+    transition-duration: 1s;
   }
   header nav a {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 2.3rem;
   }
   header nav ul {
     margin-top: 10%;
     width: 100%;
-    height: 30%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-  }
-  header nav ul li {
-    border: 1px solid blue;
   }
   header .active {
     visibility: visible;
     opacity: 1;
-    transition-duration: 1s;
     z-index: 10000;
+    transition-duration: 1s;
+  }
+  header .active a {
+    display: block;
+    font-size: 1.4rem;
   }
   main {
     transition-duration: 1s;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+    box-sizing: border-box;
   }
   main .banner {
-    overflow-x: hidden;
+    width: 100vw;
     box-shadow: none;
     border-radius: 0;
-    height: 450px;
+    height: 550px;
     background-color: #051d26;
+    position: relative;
   }
   main .banner .texto {
     width: 100%;
-    height: 160px;
+    height: 280px;
+    position: absolute;
+    top: -20px;
+    left: 1em;
+    margin: 0 auto;
   }
   main .banner .texto h1 {
-    width: 15em;
+    width: 100%;
     font-size: 1.2em;
   }
   main .banner .imagem {
-    width: 23rem;
-    height: 15rem;
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    left: 1em;
+    top: 40%;
   }
   main .servicos {
     width: 100%;
-    height: 1150px;
-    background: black;
+    height: 850px;
+    background: rgb(73, 78, 51);
   }
   main .servicos .imagem {
     width: 100%;
@@ -1002,67 +607,69 @@ footer .direitos p {
     -webkit-background-clip: text;
     position: absolute;
     right: 0.6rem;
-    top: 10px;
-    text-align: left;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 28px;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 140px;
-    left: 50%;
-  }
-  main .servicos .imagem .empresas {
-    width: 8rem;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    color: rgb(255, 251, 251);
-    position: absolute;
-    left: 2rem;
-    top: 170px;
+    top: 20px;
     text-align: left;
     text-transform: uppercase;
   }
+  main .servicos .imagem img {
+    display: block;
+    width: 40%;
+    height: 40%;
+    border-radius: 12px;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    box-shadow: 10px 5px 20px #034325;
+  }
+  main .servicos .imagem .imagem2 {
+    position: absolute;
+    top: 160px;
+    left: 55%;
+  }
+  main .servicos .imagem .empresas {
+    width: 9rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: rgb(244, 185, 59);
+    position: absolute;
+    left: 1rem;
+    top: 175px;
+    text-align: center;
+    text-transform: uppercase;
+  }
   main .servicos .pagamentos {
-    width: 100%;
-    height: 10em;
+    width: 70%;
+    height: 50vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    top: -45px;
+    top: 0;
   }
   main .servicos .pagamentos img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .servicos .app {
-    width: 100%;
-    height: 20em;
+    width: 70%;
+    height: 50vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    bottom: -50px;
+    bottom: 0;
   }
   main .servicos .app img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .formulario {
-    height: 850px;
+    width: 100%;
+    height: 900px;
     flex-direction: column;
     padding: 0;
     margin: 0;
@@ -1070,9 +677,9 @@ footer .direitos p {
     background-color: black;
   }
   main .formulario .beneficions {
+    height: 300px;
     padding: 20px;
     width: 100%;
-    height: 100%;
     background-color: black;
     border-radius: 28px;
     display: flex;
@@ -1081,8 +688,10 @@ footer .direitos p {
     align-items: center;
   }
   main .formulario .beneficions .examples {
-    width: 300px;
+    width: 100%;
     position: relative;
+    left: 0;
+    top: 0;
   }
   main .formulario .beneficions .examples h1 {
     text-align: center;
@@ -1107,8 +716,8 @@ footer .direitos p {
     color: darkgreen;
   }
   main .formulario form {
-    width: 320px;
-    height: 500px;
+    width: 100%;
+    height: 540px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -1117,18 +726,19 @@ footer .direitos p {
     border: none;
     position: relative;
     top: 15px;
+    left: 0;
   }
   main .formulario form h1 {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
-    line-height: 38px;
+    height: auto;
   }
   main .formulario form input {
     width: 100%;
     margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
     padding-left: 20px;
@@ -1147,6 +757,7 @@ footer .direitos p {
   }
   main .formulario form textarea {
     width: 100%;
+    height: 100px;
     margin: 0 auto;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
@@ -1165,8 +776,7 @@ footer .direitos p {
   }
   main .formulario form label {
     display: block;
-    margin: 0 auto 0 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   main .formulario form button {
     width: 95%;
@@ -1182,24 +792,26 @@ footer .direitos p {
     cursor: pointer;
   }
   footer {
-    width: 100%;
-    height: 550px;
+    max-width: 100vw;
+    box-sizing: border-box;
+    height: 400px;
     position: relative;
+    overflow-x: hidden;
   }
   footer .social {
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     position: absolute;
-    top: 170px;
+    top: 145px;
   }
   footer .social a:hover {
     transition-duration: 400ms;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   footer .social a:hover .azul {
     transition-duration: 400ms;
@@ -1214,10 +826,10 @@ footer .direitos p {
   }
   footer .social a i {
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
   footer .endereco {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1225,10 +837,10 @@ footer .direitos p {
   }
   footer .endereco a {
     color: white;
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
   footer .endereco a i {
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: rgb(255, 128, 0);
   }
   footer .endereco a:hover {
@@ -1239,7 +851,7 @@ footer .direitos p {
   footer .logoRodape {
     width: 100%;
     box-sizing: border-box;
-    height: 130px;
+    height: 120px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -1249,32 +861,39 @@ footer .direitos p {
     position: absolute;
     display: block;
     width: 35%;
-    height: 100%;
+    height: 90%;
     border-radius: 50%;
     top: 0px;
     margin: 10px auto;
   }
   footer .direitos {
-    width: 100%;
+    width: 80%;
     text-align: center;
     display: block;
     border: none;
   }
   footer .direitos p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+@media (min-device-width: 481px) and (max-device-width: 680px) {
+  body {
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
   header {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background: #e79128;
-    padding: 0 10px;
     transition-duration: 1s;
+    padding: 0;
+    box-sizing: border-box;
   }
   header .logo {
-    width: 50%;
+    width: 30%;
+    overflow: hidden;
   }
   header .logo img {
     width: 100%;
@@ -1284,6 +903,10 @@ footer .direitos p {
     opacity: 1;
     transition-duration: 1s;
   }
+  header .hamburguer .barra {
+    width: 25px;
+    transition-duration: 1s;
+  }
   header nav {
     visibility: hidden;
     opacity: 0;
@@ -1291,7 +914,7 @@ footer .direitos p {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #7c7678;
+    background-color: #dca443;
     left: 0;
     top: 13vh;
     text-align: center;
@@ -1299,56 +922,90 @@ footer .direitos p {
   }
   header nav a {
     color: black;
-    font-size: 2.3rem;
+    font-size: 1.6rem;
   }
   header nav ul {
     margin-top: 10%;
     width: 100%;
-    height: 30%;
+    height: 20%;
     display: flex;
     flex-direction: column;
-  }
-  header nav ul li {
-    border: 1px solid blue;
   }
   header .active {
     visibility: visible;
     opacity: 1;
     transition-duration: 1s;
     z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  header .active a {
+    font-size: 1.4rem;
+  }
+  header .ativo {
+    overflow-x: hidden;
+  }
+  header .ativo span:nth-child(1) {
+    visibility: hidden;
+    transition-duration: 1s;
+  }
+  header .ativo span:nth-child(2) {
+    position: absolute;
+    width: 30px;
+    top: 30px;
+    right: 10px;
+    transform: rotate(45deg);
+  }
+  header .ativo span:nth-child(3) {
+    position: absolute;
+    width: 30px;
+    top: 30px;
+    right: 10px;
+    transform: rotate(-45deg);
   }
   main {
     transition-duration: 1s;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+    box-sizing: border-box;
   }
   main .banner {
-    overflow-x: hidden;
+    width: 100vw;
     box-shadow: none;
     border-radius: 0;
-    height: 450px;
+    height: 590px;
     background-color: #051d26;
+    position: relative;
   }
   main .banner .texto {
-    width: 100%;
-    height: 160px;
+    width: 90%;
+    height: 280px;
+    position: absolute;
+    top: -20px;
+    left: 4em;
+    margin: 0 auto;
   }
   main .banner .texto h1 {
-    width: 15em;
-    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    font-size: 1.7em;
   }
   main .banner .imagem {
-    width: 23rem;
-    height: 15rem;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 35%;
+    top: 40%;
   }
   main .servicos {
     width: 100%;
-    height: 1150px;
+    height: 900px;
     background: black;
   }
   main .servicos .imagem {
     width: 100%;
-    height: 300px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1358,75 +1015,77 @@ footer .direitos p {
     box-shadow: none;
   }
   main .servicos .imagem h1 {
-    width: 8rem;
+    width: 19rem;
     letter-spacing: 2px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background-image: linear-gradient(to right, rgb(215, 194, 2), white);
     color: transparent;
     -webkit-background-clip: text;
     position: absolute;
-    right: 0.6rem;
-    top: 10px;
+    left: 60%;
+    top: 9%;
     text-align: left;
+    text-transform: uppercase;
   }
   main .servicos .imagem img {
     display: block;
-    width: 9rem;
-    height: 9rem;
+    width: 18rem;
+    height: 18rem;
     border-radius: 28px;
     position: absolute;
-    left: 10px;
-    top: 0px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
+    left: 15px;
+    top: 30%;
+    box-shadow: 10px 5px 20px #034325;
   }
   main .servicos .imagem .imagem2 {
     position: absolute;
-    top: 140px;
-    left: 50%;
+    top: 30%;
+    left: 53%;
   }
   main .servicos .imagem .empresas {
-    width: 8rem;
+    width: 19rem;
     letter-spacing: 2px;
-    font-size: 0.8rem;
-    color: rgb(255, 251, 251);
+    font-size: 1rem;
+    color: rgb(161, 103, 4);
     position: absolute;
-    left: 2rem;
-    top: 170px;
+    left: 55%;
+    top: 9%;
     text-align: left;
     text-transform: uppercase;
   }
   main .servicos .pagamentos {
-    width: 100%;
-    height: 10em;
+    width: 300px;
+    height: 300px;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    top: -45px;
+    top: 5px;
   }
   main .servicos .pagamentos img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .servicos .app {
-    width: 100%;
-    height: 20em;
+    width: 300px;
+    height: 300px;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    bottom: -50px;
+    bottom: 0px;
   }
   main .servicos .app img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .formulario {
-    height: 850px;
+    width: 100%;
+    height: 1200px;
     flex-direction: column;
     padding: 0;
     margin: 0;
@@ -1434,19 +1093,22 @@ footer .direitos p {
     background-color: black;
   }
   main .formulario .beneficions {
-    padding: 20px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: black;
     border-radius: 28px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: relative;
   }
   main .formulario .beneficions .examples {
-    width: 300px;
-    position: relative;
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    left: 4rem;
+    top: 0;
   }
   main .formulario .beneficions .examples h1 {
     text-align: center;
@@ -1471,8 +1133,8 @@ footer .direitos p {
     color: darkgreen;
   }
   main .formulario form {
-    width: 320px;
-    height: 500px;
+    width: 500px;
+    height: 550px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -1480,19 +1142,21 @@ footer .direitos p {
     background-color: #383939;
     border: none;
     position: relative;
-    top: 15px;
+    top: 0;
+    left: 1em;
+    border-radius: 12px;
   }
   main .formulario form h1 {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
-    line-height: 38px;
+    height: auto;
   }
   main .formulario form input {
     width: 100%;
     margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
     padding-left: 20px;
@@ -1511,6 +1175,7 @@ footer .direitos p {
   }
   main .formulario form textarea {
     width: 100%;
+    height: 100px;
     margin: 0 auto;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
@@ -1529,8 +1194,7 @@ footer .direitos p {
   }
   main .formulario form label {
     display: block;
-    margin: 0 auto 0 20px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   main .formulario form button {
     width: 95%;
@@ -1546,24 +1210,26 @@ footer .direitos p {
     cursor: pointer;
   }
   footer {
-    width: 100%;
-    height: 400px;
+    max-width: 100vw;
+    box-sizing: border-box;
+    height: 500px;
     position: relative;
+    overflow-x: hidden;
   }
   footer .social {
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     position: absolute;
     top: 160px;
   }
   footer .social a:hover {
     transition-duration: 400ms;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   footer .social a:hover .azul {
     transition-duration: 400ms;
@@ -1581,7 +1247,7 @@ footer .direitos p {
     font-size: 2rem;
   }
   footer .endereco {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1589,10 +1255,10 @@ footer .direitos p {
   }
   footer .endereco a {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   footer .endereco a i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: rgb(255, 128, 0);
   }
   footer .endereco a:hover {
@@ -1601,9 +1267,9 @@ footer .direitos p {
     color: green;
   }
   footer .logoRodape {
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
-    height: 130px;
+    height: 120px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -1613,34 +1279,430 @@ footer .direitos p {
     position: absolute;
     display: block;
     width: 35%;
-    height: 100%;
+    height: 90%;
     border-radius: 50%;
     top: 0px;
     margin: 10px auto;
   }
   footer .direitos {
-    width: 100%;
+    width: 80%;
     text-align: center;
     display: block;
     border: none;
   }
   footer .direitos p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
-/*--------------------------------------------------------------------------------*/
-@media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+@media (min-device-width: 681px) and (max-device-width: 900px) {
+  body {
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    transition-duration: 400ms;
+  }
   header {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background: #e79128;
-    padding: 0 10px;
     transition-duration: 1s;
-    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
   }
   header .logo {
+    width: 10%;
+    overflow: hidden;
+  }
+  header .logo img {
+    width: 100%;
+  }
+  header .hamburguer {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  header .hamburguer .barra {
+    width: 25px;
+    transition-duration: 1s;
+  }
+  header nav {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #dca443;
+    left: 0;
+    top: 13vh;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  header nav a {
+    color: black;
+    font-size: 1.6rem;
+  }
+  header nav ul {
+    margin-top: 10%;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  header .active {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 1s;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  header .active a {
+    font-size: 1.4rem;
+  }
+  header .ativo {
+    overflow-x: hidden;
+  }
+  header .ativo span:nth-child(1) {
+    visibility: hidden;
+    transition-duration: 1s;
+  }
+  header .ativo span:nth-child(2) {
+    position: absolute;
+    width: 30px;
+    top: 30px;
+    right: 10px;
+    transform: rotate(45deg);
+  }
+  header .ativo span:nth-child(3) {
+    position: absolute;
+    width: 30px;
+    top: 30px;
+    right: 10px;
+    transform: rotate(-45deg);
+  }
+  main {
+    transition-duration: 1s;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  main .banner {
+    width: 100vw;
+    box-shadow: none;
+    border-radius: 0;
+    height: 550px;
+    background-color: #051d26;
+    position: relative;
+  }
+  main .banner .texto {
+    width: 90%;
+    height: 280px;
+    position: absolute;
+    top: -20px;
+    left: 4em;
+    margin: 0 auto;
+  }
+  main .banner .texto h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 1.7em;
+  }
+  main .banner .imagem {
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    left: 35%;
+    top: 40%;
+  }
+  main .servicos {
+    width: 100%;
+    height: 900px;
+    background: black;
+  }
+  main .servicos .imagem {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0;
+    background: rgb(6, 6, 6);
+    box-shadow: none;
+  }
+  main .servicos .imagem h1 {
+    width: 16rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    background-image: linear-gradient(to right, rgb(215, 194, 2), white);
+    color: transparent;
+    -webkit-background-clip: text;
+    position: absolute;
+    left: 7rem;
+    top: 9%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  main .servicos .imagem img {
+    display: block;
+    width: 33%;
+    height: 45%;
+    border-radius: 28px;
+    position: absolute;
+    left: 6em;
+    top: 30%;
+    box-shadow: 10px 5px 20px #034325;
+  }
+  main .servicos .imagem .imagem2 {
+    position: absolute;
+    top: 30%;
+    left: 53%;
+  }
+  main .servicos .imagem .empresas {
+    width: 16rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: rgb(161, 103, 4);
+    position: absolute;
+    left: 55%;
+    top: 9%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  main .servicos .pagamentos {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 1px 20px 30px black;
+    position: relative;
+    top: 5px;
+  }
+  main .servicos .pagamentos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+  }
+  main .servicos .app {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 1px 20px 30px black;
+    position: relative;
+    bottom: 0px;
+    top: 5px;
+  }
+  main .servicos .app img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+  }
+  main .formulario {
+    width: 100%;
+    height: 600px;
+    flex-direction: column;
+    background-image: url("../../images/models/um cartao sem fronteiras.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  main .formulario .beneficions {
+    display: none;
+  }
+  main .formulario form {
+    align-self: center;
+    width: 450px;
+    height: 550px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 12px;
+    position: absolute;
+    right: 15%;
+    top: 2em;
+  }
+  main .formulario form h1 {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    height: auto;
+  }
+  main .formulario form input {
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    background-color: rgb(98, 93, 93);
+    padding-left: 20px;
+    color: white;
+    outline: none;
+    border: none;
+    transition-duration: 400ms;
+  }
+  main .formulario form input::-moz-placeholder {
+    color: black;
+  }
+  main .formulario form input::placeholder {
+    color: black;
+  }
+  main .formulario form input:focus {
+    background-color: gray;
+  }
+  main .formulario form textarea {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: rgb(98, 93, 93);
+    outline: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    transition-duration: 400ms;
+  }
+  main .formulario form textarea::-moz-placeholder {
+    color: black;
+  }
+  main .formulario form textarea::placeholder {
+    color: black;
+  }
+  main .formulario form textarea:focus {
+    background-color: gray;
+  }
+  main .formulario form label {
+    display: block;
+    font-size: 0.8rem;
+  }
+  main .formulario form button {
+    width: 95%;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 12px;
+    background-color: #5b0465;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  footer {
+    max-width: 100vw;
+    box-sizing: border-box;
+    height: 500px;
+    position: relative;
+    overflow-x: hidden;
+  }
+  footer .social {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+  }
+  footer .social a:hover {
+    transition-duration: 400ms;
+    transform: scale(1.3);
+  }
+  footer .social a:hover .azul {
+    transition-duration: 400ms;
+    color: #00bfff;
+  }
+  footer .social a:hover .azulF {
+    transition-duration: 400ms;
+    color: #3b5998;
+  }
+  footer .social a:hover .inst {
+    color: #f32a4b;
+  }
+  footer .social a i {
+    color: white;
+    font-size: 2rem;
+  }
+  footer .endereco {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  footer .endereco a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  footer .endereco a i {
+    font-size: 1.5rem;
+    color: rgb(255, 128, 0);
+  }
+  footer .endereco a:hover {
+    transition-duration: 600ms;
+    text-decoration: underline;
+    color: green;
+  }
+  footer .logoRodape {
     width: 50%;
+    box-sizing: border-box;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+  }
+  footer .logoRodape img {
+    position: absolute;
+    display: block;
+    width: 35%;
+    height: 90%;
+    border-radius: 50%;
+    top: 0px;
+    margin: 10px auto;
+  }
+  footer .direitos {
+    width: 80%;
+    text-align: center;
+    display: block;
+    border: none;
+  }
+  footer .direitos p {
+    font-size: 1.5rem;
+  }
+}
+/*--------------------------RESPONSIVIDADE EM CELULARES e tablets----------------------------------*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  body {
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #e79128;
+    transition-duration: 1s;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header .logo {
+    width: 30%;
+    overflow: hidden;
   }
   header .logo img {
     width: 100%;
@@ -1657,64 +1719,75 @@ footer .direitos p {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #7c7678;
+    background-color: #3b212a;
     left: 0;
     top: 13vh;
     text-align: center;
     box-sizing: border-box;
+    transition-duration: 1s;
   }
   header nav a {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 2.3rem;
   }
   header nav ul {
     margin-top: 10%;
     width: 100%;
-    height: 30%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-  }
-  header nav ul li {
-    border: 1px solid blue;
   }
   header .active {
     visibility: visible;
     opacity: 1;
-    transition-duration: 1s;
     z-index: 10000;
+    transition-duration: 1s;
+  }
+  header .active a {
+    display: block;
+    font-size: 1.4rem;
   }
   main {
     transition-duration: 1s;
     width: 100%;
     overflow: hidden;
+    box-sizing: border-box;
   }
   main .banner {
-    overflow-x: hidden;
+    width: 100vw;
     box-shadow: none;
     border-radius: 0;
-    height: 450px;
+    height: 580px;
     background-color: #051d26;
+    position: relative;
   }
   main .banner .texto {
     width: 100%;
-    height: 160px;
+    height: 280px;
+    position: absolute;
+    top: -20px;
+    left: 1em;
+    margin: 0 auto;
   }
   main .banner .texto h1 {
-    width: 15em;
+    width: 100%;
     font-size: 1.2em;
   }
   main .banner .imagem {
-    width: 23rem;
-    height: 15rem;
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    left: 13%;
+    top: 40%;
   }
   main .servicos {
     width: 100%;
-    height: 1150px;
-    background: black;
+    height: 950px;
+    background: rgb(73, 78, 51);
   }
   main .servicos .imagem {
     width: 100%;
-    height: 300px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1724,85 +1797,89 @@ footer .direitos p {
     box-shadow: none;
   }
   main .servicos .imagem h1 {
-    width: 8rem;
+    width: 10rem;
     letter-spacing: 2px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background-image: linear-gradient(to right, rgb(215, 194, 2), white);
     color: transparent;
     -webkit-background-clip: text;
     position: absolute;
     right: 0.6rem;
-    top: 10px;
-    text-align: left;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 28px;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 140px;
-    left: 50%;
-  }
-  main .servicos .imagem .empresas {
-    width: 8rem;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    color: rgb(255, 251, 251);
-    position: absolute;
-    left: 2rem;
-    top: 170px;
+    top: 16px;
     text-align: left;
     text-transform: uppercase;
   }
+  main .servicos .imagem img {
+    display: block;
+    width: 40%;
+    height: 40%;
+    border-radius: 12px;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    box-shadow: 10px 5px 20px #034325;
+  }
+  main .servicos .imagem .imagem2 {
+    position: absolute;
+    top: 185px;
+    left: 55%;
+  }
+  main .servicos .imagem .empresas {
+    width: 10rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: rgb(244, 185, 59);
+    position: absolute;
+    left: 1rem;
+    top: 205px;
+    text-align: center;
+    text-transform: uppercase;
+  }
   main .servicos .pagamentos {
-    width: 100%;
-    height: 10em;
+    width: 70%;
+    height: 40vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    top: -45px;
+    top: 0;
   }
   main .servicos .pagamentos img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .servicos .app {
-    width: 100%;
-    height: 20em;
+    width: 70%;
+    height: 40vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
-    bottom: -50px;
+    bottom: 0;
   }
   main .servicos .app img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     margin: 0 auto;
     display: block;
   }
   main .formulario {
-    height: 850px;
+    width: 100%;
+    height: 1000px;
     flex-direction: column;
     padding: 0;
     margin: 0;
     gap: 0;
-    background-color: black;
+    background-image: url("../../images/models/bgform.png");
+    background-size: cover;
+    background-position: center;
   }
   main .formulario .beneficions {
+    height: 380px;
     padding: 20px;
     width: 100%;
-    height: 100%;
     background-color: black;
     border-radius: 28px;
     display: flex;
@@ -1811,8 +1888,10 @@ footer .direitos p {
     align-items: center;
   }
   main .formulario .beneficions .examples {
-    width: 300px;
+    width: 100%;
     position: relative;
+    left: 0;
+    top: 0;
   }
   main .formulario .beneficions .examples h1 {
     text-align: center;
@@ -1823,7 +1902,7 @@ footer .direitos p {
   main .formulario .beneficions .examples img {
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     height: 100%;
     border-radius: 28px;
     box-shadow: none;
@@ -1837,8 +1916,8 @@ footer .direitos p {
     color: darkgreen;
   }
   main .formulario form {
-    width: 320px;
-    height: 500px;
+    width: 100%;
+    height: 540px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -1847,18 +1926,19 @@ footer .direitos p {
     border: none;
     position: relative;
     top: 15px;
+    left: 0;
   }
   main .formulario form h1 {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
-    line-height: 38px;
+    height: auto;
   }
   main .formulario form input {
     width: 100%;
     margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
     padding-left: 20px;
@@ -1877,6 +1957,7 @@ footer .direitos p {
   }
   main .formulario form textarea {
     width: 100%;
+    height: 100px;
     margin: 0 auto;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
@@ -1895,8 +1976,7 @@ footer .direitos p {
   }
   main .formulario form label {
     display: block;
-    margin: 0 auto 0 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   main .formulario form button {
     width: 95%;
@@ -1912,25 +1992,26 @@ footer .direitos p {
     cursor: pointer;
   }
   footer {
-    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
     height: 400px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   footer .social {
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     position: absolute;
-    top: 170px;
+    top: 145px;
   }
   footer .social a:hover {
     transition-duration: 400ms;
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   footer .social a:hover .azul {
     transition-duration: 400ms;
@@ -1945,7 +2026,7 @@ footer .direitos p {
   }
   footer .social a i {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   footer .endereco {
     width: 80%;
@@ -1970,7 +2051,7 @@ footer .direitos p {
   footer .logoRodape {
     width: 100%;
     box-sizing: border-box;
-    height: 130px;
+    height: 120px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -1979,494 +2060,22 @@ footer .direitos p {
   footer .logoRodape img {
     position: absolute;
     display: block;
-    width: 35%;
-    height: 100%;
-    border-radius: 50%;
-    top: 0px;
-    margin: 10px auto;
-  }
-  footer .direitos {
-    width: 100%;
-    text-align: center;
-    display: block;
-    border: none;
-  }
-  footer .direitos p {
-    font-size: 1rem;
-  }
-}
-/*--------------------------------------------------------------------------------*/
-@media only screen and (min-device-width: 280px) and (max-device-width: 653px) {
-  header {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    padding: 0 10px;
-    transition-duration: 1s;
-  }
-  header .logo {
-    width: 50%;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-  }
-  header nav {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #5c5770;
-    left: 0;
-    top: 13vh;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  header nav a {
-    color: black;
-    font-size: 2.3rem;
-  }
-  header nav ul {
-    margin-top: 10%;
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-  }
-  header .active {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-    z-index: 10000;
-  }
-  header .active a {
-    font-size: 1.2rem;
-  }
-  header .active ul li {
-    border: none;
-  }
-  main {
-    transition-duration: 1s;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  main .banner {
-    overflow-x: hidden;
-    box-shadow: none;
-    border-radius: 0;
-    height: 400px;
-    background-color: #051d26;
-  }
-  main .banner .texto {
-    width: 100%;
-    height: 160px;
-  }
-  main .banner .texto h1 {
-    width: 15em;
-    font-size: 1.1em;
-  }
-  main .banner .imagem {
-    width: 18rem;
-    height: 12rem;
-  }
-  main .servicos {
-    width: 100%;
-    height: 1000px;
-    background: black;
-    overflow-x: hidden;
-  }
-  main .servicos .imagem {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0;
-    background: rgb(6, 6, 6);
-    box-shadow: none;
-  }
-  main .servicos .imagem h1 {
-    width: 8rem;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    background-image: linear-gradient(to right, rgb(215, 194, 2), white);
-    color: transparent;
-    -webkit-background-clip: text;
-    position: absolute;
-    right: 0.6rem;
-    top: 10px;
-    text-align: left;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 7.5rem;
-    height: 7.5rem;
-    border-radius: 28px;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 140px;
-    left: 50%;
-  }
-  main .servicos .imagem .empresas {
-    width: 8rem;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    color: rgb(255, 251, 251);
-    position: absolute;
-    left: 1rem;
-    top: 170px;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  main .servicos .pagamentos {
-    width: 100%;
-    height: 10em;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    top: -25px;
-  }
-  main .servicos .pagamentos img {
-    width: 90%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .servicos .app {
-    width: 100%;
-    height: 20em;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    bottom: 0px;
-  }
-  main .servicos .app img {
-    width: 90%;
+    width: 30%;
     height: 90%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .formulario {
-    height: 850px;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    gap: 0;
-    background-color: black;
-    overflow-x: hidden;
-  }
-  main .formulario .beneficions {
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  main .formulario .beneficions .examples {
-    width: 300px;
-    position: relative;
-  }
-  main .formulario .beneficions .examples h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #ffffff;
-    position: absolute;
-  }
-  main .formulario .beneficions .examples img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    box-shadow: none;
-  }
-  main .formulario .beneficions a {
-    color: white;
-    font-size: 1.4rem;
-    line-height: 50px;
-  }
-  main .formulario .beneficions a:hover {
-    color: darkgreen;
-  }
-  main .formulario form {
-    width: 320px;
-    height: 500px;
-    border-radius: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #383939;
-    border: none;
-    position: relative;
-    top: 15px;
-  }
-  main .formulario form h1 {
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    line-height: 38px;
-  }
-  main .formulario form input {
-    width: 100%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    padding-left: 20px;
-    color: white;
-    outline: none;
-    border: none;
-  }
-  main .formulario form input::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form input::placeholder {
-    color: black;
-  }
-  main .formulario form input:focus {
-    background-color: gray;
-  }
-  main .formulario form textarea {
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    outline: none;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-  main .formulario form textarea::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form textarea::placeholder {
-    color: black;
-  }
-  main .formulario form textarea:focus {
-    background-color: gray;
-  }
-  main .formulario form label {
-    display: block;
-    margin: 0 auto 0 20px;
-    font-size: 1rem;
-  }
-  main .formulario form button {
-    width: 95%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 12px;
-    background-color: #5b0465;
-    color: white;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  footer {
-    width: 100%;
-    height: 550px;
-    position: relative;
-    overflow-x: hidden;
-  }
-  footer .social {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 40px;
-    justify-content: center;
-    align-items: baseline;
-    position: absolute;
-    top: 170px;
-  }
-  footer .social a:hover {
-    transition-duration: 400ms;
-    transform: scale(1.2);
-  }
-  footer .social a:hover .azul {
-    transition-duration: 400ms;
-    color: #00bfff;
-  }
-  footer .social a:hover .azulF {
-    transition-duration: 400ms;
-    color: #3b5998;
-  }
-  footer .social a:hover .inst {
-    color: #f32a4b;
-  }
-  footer .social a i {
-    color: white;
-    font-size: 2.5rem;
-  }
-  footer .endereco {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  footer .endereco a {
-    color: white;
-    font-size: 1.2rem;
-  }
-  footer .endereco a i {
-    font-size: 1.2rem;
-    color: rgb(255, 128, 0);
-  }
-  footer .endereco a:hover {
-    transition-duration: 600ms;
-    text-decoration: underline;
-    color: green;
-  }
-  footer .logoRodape {
-    width: 100%;
-    box-sizing: border-box;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-  }
-  footer .logoRodape img {
-    position: absolute;
-    display: block;
-    width: 35%;
-    height: 100%;
     border-radius: 50%;
     top: 0px;
     margin: 10px auto;
   }
   footer .direitos {
-    width: 100%;
+    width: 80%;
     text-align: center;
     display: block;
     border: none;
   }
   footer .direitos p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
-/*--------------------------------------------------------------------------------*/
-/*TABLETS*/
-@media only screen and (min-device-width: 481px) and (max-device-width: 900px) {
-  /* tablets */
-  header {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    padding: 0 10px;
-    transition-duration: 1s;
-    overflow: hidden;
-  }
-  header .logo {
-    width: 20%;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-  }
-  header nav {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #7c7678;
-    left: 0;
-    top: 13vh;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  header nav a {
-    color: black;
-    font-size: 2.3rem;
-  }
-  header nav ul {
-    margin-top: 10%;
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.3rem;
-  }
-  header nav ul li {
-    border: 1px solid blue;
-  }
-  header .active {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-    z-index: 10000;
-  }
-}
-/*desktops*/
-@media only screen and (min-device-width: 901px) and (max-device-width: 1248px) {
-  header {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    padding: 0 10px;
-    transition-duration: 1s;
-    overflow: hidden;
-  }
-  header .logo {
-    width: 20%;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 1s;
-  }
-  header nav {
-    width: 500px;
-    visibility: visible;
-    opacity: 1;
-    padding: 0;
-    left: 0;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  header nav a {
-    color: white;
-    font-size: 1.4rem;
-  }
-  header nav ul {
-    display: flex;
-    font-size: 1.3rem;
-  }
-}
-/*--------------------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -2475,6 +2084,7 @@ footer .direitos p {
   list-style: none;
   font-size: 1rem;
   font-family: "Lora", serif;
+  overflow-x: hidden;
 }
 
 body {

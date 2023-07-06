@@ -8,7 +8,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 60%;
+    height: 100vh;
     padding: 0 80px;
     background-color: #031220;
     border-radius: 12px;
@@ -28,9 +28,9 @@ main {
         letter-spacing: 2px;
         font-size: 60px;
         background-image: linear-gradient(
-          to right, #1f5f61,
-          #ff914c,
-          green
+          40deg, #da862d,
+          #e54c6f,
+          rgb(128, 0, 51)
         );
         color: transparent;
         -webkit-background-clip: text;
@@ -142,11 +142,41 @@ main {
             height: 350px;
             border-radius: 28px;
             box-shadow: 1px 20px 30px black;
+            overflow: hidden;
+            
+                a{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    overflow: hidden;
+
+                    &::after{
+                        content: "";
+                        width: 150%;
+                        height: 20%;
+                        position: absolute;
+                        left: -150%;
+                        top: 30%;
+                        background-color: #ffffff87;
+                        transform: skewY(45deg);
+                        transition-duration: 0.8s;
+                    }
+
+                    &:hover::after{
+                        left: 100%;
+                    }
+                }
 
                 img{
+                    display: block;
+                    margin: 0 auto;
                     width: 100%;
                     border-radius: 28px;
                 }
+
+
+                
         }
 
         .app{
@@ -155,9 +185,33 @@ main {
             border-radius: 28px;
             box-shadow: 1px 20px 30px black;
 
-            img{
+            a{
+                position: relative;
                 width: 100%;
                 height: 100%;
+                display: block;
+                overflow: hidden;
+
+                &::after{
+                    content: "";
+                    width: 150%;
+                    height: 20%;
+                    position: absolute;
+                    left: -150%;
+                    top: 30%;
+                    background-color: #f6ff0087;
+                    transform: skewY(45deg);
+                    transition-duration: 0.8s;
+                }
+
+                &:hover::after{
+                    left: 100%;
+                }
+            }
+
+            img{
+                display: block;
+                width: 100%;
                 border-radius: 28px;
             }
         }
@@ -175,18 +229,20 @@ main {
 
             .beneficions{
                 padding: 20px;
-                width: 90%;
+                width: 100%;
                 height: 70%;
                 background-color: #58302683;
                 border-radius: 28px;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                position: relative;
 
                 .examples{
                     width: 620px;
                     height: 620px;
-                    position: relative;
+                    position: absolute;
+                    left: 250px;
                     h1{
                         text-align: center;
                         font-size: 36px;
@@ -227,12 +283,14 @@ main {
                 background-color: #383939;
                 border: 3px dashed #991818;
                 box-shadow: 1px 10px 30px black;
+                position: absolute;
+                right: 250px;
 
                     h1{
                         width: 100%;
-                        font-size: 26px;
                         text-align: center;
-                        line-height: 38px;
+                        font-size: 1.5rem;
+                        height: 50px;
                     }
 
                     input{
@@ -273,13 +331,13 @@ main {
 
                     label{
                         display: block;
-                        margin: 0 auto 0 20px;
+                        height: 25px;
                     }
 
                     button{
                         width: 95%;
                         margin: 0 auto;
-                        height: 50px;
+                        height: 60px;
                         line-height: 50px;
                         border-radius: 12px;
                         background-color: #5b0465;
@@ -293,14 +351,13 @@ main {
      }
 }
 
-
 @keyframes background {
     0%{
         background-color: #031220a2;
     }
-    50%{
-        background-color: #5b04657a;
-        box-shadow: 1px 1px 50px rgb(236, 143, 233);
+    60%{
+        background-color: #e19b047a;
+        box-shadow: 1px 1px 50px rgb(197, 2, 63);
     }
     100%{
         background-color: #031220a2;
