@@ -9,12 +9,15 @@ header{
     box-sizing: border-box;
     padding: 0 80px;
 
+
         .logo{
             width: 300px;
             height: 100%;
             box-sizing: border-box;
+            overflow: hidden;
+
                 img{
-                    width: 60%;
+                    width: 50%;
                     height: 100%;
                 }
         }
