@@ -1433,7 +1433,7 @@
 /*--------------------------RESPONSIVIDADE EM CELULARES e tablets----------------------------------*/
 
 //-> IPHONES;
-@media only screen and (max-device-width: 375px) {
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   body {
     max-width: 100vw;
     box-sizing: border-box;
@@ -1866,10 +1866,10 @@
       }
     }
   }
-} // IPHONE SE -> OK
+} // IPHONE SE -> OK especifico para iphone
 
 //IPHONE 12 PRO / PRO MAX
-@media only screen and (max-device-width: 390px) {
+@media only screen and (device-width: 390px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   body {
     max-width: 100vw;
     box-sizing: border-box;
@@ -2302,7 +2302,7 @@
       }
     }
   }
-} // -> OK
+} // -> OK especifico para iphone
 
 @media only screen and (max-device-width: 414px) {
   body {
