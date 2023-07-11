@@ -26,12 +26,13 @@ header .hamburguer {
   visibility: hidden;
   opacity: 0;
   width: 40px;
-  height: 25%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   overflow-x: hidden;
+  transition-duration: 1s;
 }
 header .hamburguer .barra {
   display: block;
@@ -42,22 +43,24 @@ header .hamburguer .barra {
 }
 header .ativo {
   overflow-x: hidden;
+  transition-duration: 1s;
 }
 header .ativo span:nth-child(1) {
-  display: none;
+  width: 0%;
+  transition-duration: 1s;
 }
 header .ativo span:nth-child(2) {
   position: absolute;
   width: 30px;
-  top: 40px;
-  right: 20px;
+  top: 30px;
+  right: 10px;
   transform: rotate(45deg);
 }
 header .ativo span:nth-child(3) {
   position: absolute;
   width: 30px;
-  top: 40px;
-  right: 20px;
+  top: 30px;
+  right: 10px;
   transform: rotate(-45deg);
 }
 header nav {
@@ -399,6 +402,119 @@ main .formulario form button {
   border: none;
   cursor: pointer;
 }
+main .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5843137255);
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 1s;
+  pointer-events: none;
+}
+main .overlay.active {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: all;
+}
+main .acessar-conta {
+  visibility: hidden;
+  opacity: 0;
+  width: 400px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1f3142;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  transition-delay: 500ms;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+main .acessar-conta.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10000;
+}
+main .acessar-conta form {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .acessar-conta form h1 {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  position: relative;
+}
+main .acessar-conta form h1::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  border-radius: 20px;
+  height: 3px;
+  bottom: 2px;
+  left: 0%;
+  background-color: rgb(255, 247, 247);
+}
+main .acessar-conta form h1 span {
+  text-align: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 400ms;
+}
+main .acessar-conta form h1 span:hover {
+  background-color: red;
+}
+main .acessar-conta form a {
+  color: white;
+}
+main .acessar-conta form .btn-conta {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+main .acessar-conta form .btn-conta:hover {
+  background-color: rgb(64, 96, 14);
+}
+main .acessar-conta form .btn-conta:active a {
+  color: #491313;
+}
+main .acessar-conta form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding-left: 20px;
+  background-color: gray;
+  color: white;
+}
 
 @keyframes background {
   0% {
@@ -507,7 +623,7 @@ footer .direitos p {
     box-sizing: border-box;
   }
   header .logo {
-    width: 40%;
+    width: 30%;
     overflow: hidden;
   }
   header .logo img {
@@ -516,7 +632,11 @@ footer .direitos p {
   header .hamburguer {
     visibility: visible;
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 400ms;
+  }
+  header .hamburguer .barra {
+    width: 25px;
+    transition-duration: 400ms;
   }
   header nav {
     visibility: hidden;
@@ -561,7 +681,7 @@ footer .direitos p {
   }
   main .banner {
     width: 100%;
-    height: 90vh !important;
+    height: 100vh;
     box-shadow: none;
     border-radius: 0;
     height: 100vh;
@@ -796,6 +916,22 @@ footer .direitos p {
     outline: none;
     border: none;
     cursor: pointer;
+  }
+  main .acessar-conta {
+    width: 100%;
+    height: 75vh;
+  }
+  main .acessar-conta form {
+    width: 100%;
+  }
+  main .acessar-conta form input {
+    height: 30px;
+  }
+  main .acessar-conta form label {
+    font-size: 0.5rem;
+  }
+  main .acessar-conta form label i {
+    font-size: 0.5rem;
   }
   footer {
     max-width: 100vw;
@@ -1693,7 +1829,7 @@ footer .direitos p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
   body {
     max-width: 100vw;
     box-sizing: border-box;
@@ -2017,7 +2153,7 @@ footer .direitos p {
   }
   main .formulario form {
     width: 500px;
-    height: 500px;
+    height: 510px;
     border-radius: 28px;
     display: flex;
     flex-direction: column;

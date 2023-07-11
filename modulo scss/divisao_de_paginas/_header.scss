@@ -27,12 +27,13 @@ header{
     visibility: hidden;
     opacity: 0;
     width: 40px;
-    height: 25%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     overflow-x: hidden;
+    transition-duration: 1s;
         .barra{
             display: block;
             width: 80%;
@@ -44,24 +45,26 @@ header{
 
 .ativo{
     overflow-x: hidden;
+    transition-duration: 1s;
 
     span:nth-child(1){
-        display: none;
+        width: 0%;
+        transition-duration: 1s;
     }
 
     span:nth-child(2){
         position: absolute;
         width: 30px;
-        top: 40px;
-        right: 20px;
+        top: 30px;
+        right: 10px;
         transform: rotate(45deg);
     }
 
     span:nth-child(3){
         position: absolute;
         width: 30px;
-        top: 40px;
-        right: 20px;
+        top: 30px;
+        right: 10px;
         transform: rotate(-45deg);
     }
 }
