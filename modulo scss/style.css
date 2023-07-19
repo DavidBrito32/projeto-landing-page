@@ -13,13 +13,13 @@ header {
   /*-----------------------------------------------------------------CONFIGURACAO DA NAVBAR-----------------------------------------------------------------*/
 }
 header .logo {
-  width: 300px;
+  width: 10em;
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 header .logo img {
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 header .hamburguer {
@@ -82,7 +82,7 @@ header nav ul {
 }
 
 main {
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
 }
 main .banner {
@@ -91,7 +91,7 @@ main .banner {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   padding: 0 80px;
   background-color: #031220;
   border-radius: 12px;
@@ -99,7 +99,7 @@ main .banner {
   overflow-x: hidden;
 }
 main .banner .texto {
-  width: 53%;
+  width: 43em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ main .banner .texto {
   align-items: center;
 }
 main .banner .texto h1 {
-  text-align: left;
+  text-align: center;
   letter-spacing: 2px;
   font-size: 60px;
   background-image: linear-gradient(40deg, #da862d, #54087b);
@@ -123,8 +123,8 @@ main .banner .texto .typer {
   -webkit-background-clip: text;
 }
 main .banner .imagem {
-  width: 650px;
-  height: 650px;
+  width: 35em;
+  height: 35em;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -168,8 +168,8 @@ main .servicos {
   box-shadow: 1px 20px 15px rgba(246, 165, 4, 0.462745098);
 }
 main .servicos .imagem {
-  width: 45%;
-  height: 70%;
+  width: 50em;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,13 +191,12 @@ main .servicos .imagem h1 {
 }
 main .servicos .imagem img {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 18em;
+  height: 18em;
   border-radius: 28px;
   position: absolute;
   left: 40px;
   top: 30px;
-  box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
   box-shadow: 1px 20px 30px black;
 }
 main .servicos .imagem .imagem2 {
@@ -212,8 +211,8 @@ main .servicos .imagem .empresas {
   color: black;
 }
 main .servicos .pagamentos {
-  width: 350px;
-  height: 350px;
+  width: 20em;
+  height: 20em;
   border-radius: 28px;
   box-shadow: 1px 20px 30px black;
   overflow: hidden;
@@ -246,8 +245,8 @@ main .servicos .pagamentos img {
   border-radius: 28px;
 }
 main .servicos .app {
-  width: 350px;
-  height: 350px;
+  width: 20em;
+  height: 20em;
   border-radius: 28px;
   box-shadow: 1px 20px 30px black;
 }
@@ -290,7 +289,7 @@ main .formulario {
 main .formulario .beneficions {
   padding: 20px;
   width: 100%;
-  height: 70%;
+  height: 90%;
   background-color: rgba(88, 48, 38, 0.5137254902);
   border-radius: 28px;
   display: flex;
@@ -299,10 +298,10 @@ main .formulario .beneficions {
   position: relative;
 }
 main .formulario .beneficions .examples {
-  width: 620px;
-  height: 620px;
+  width: 40em;
+  height: 40em;
   position: absolute;
-  left: 250px;
+  left: 100px;
 }
 main .formulario .beneficions .examples h1 {
   text-align: center;
@@ -327,8 +326,8 @@ main .formulario .beneficions a:hover {
   color: darkgreen;
 }
 main .formulario form {
-  width: 500px;
-  height: 600px;
+  width: 40em;
+  height: 40em;
   border-radius: 28px;
   display: flex;
   flex-direction: column;
@@ -338,18 +337,18 @@ main .formulario form {
   border: 3px dashed #991818;
   box-shadow: 1px 10px 30px black;
   position: absolute;
-  right: 250px;
+  right: 100px;
 }
 main .formulario form h1 {
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   height: 50px;
 }
 main .formulario form input {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
-  height: 50px;
+  height: 60px;
   line-height: 50px;
   border-radius: 8px;
   background-color: rgb(98, 93, 93);
@@ -368,7 +367,7 @@ main .formulario form input:focus {
   background-color: gray;
 }
 main .formulario form textarea {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 8px;
   background-color: rgb(98, 93, 93);
@@ -387,13 +386,13 @@ main .formulario form textarea:focus {
 }
 main .formulario form label {
   display: block;
-  height: 25px;
+  height: 50px;
+  font-size: 1.2rem;
 }
 main .formulario form button {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   height: 60px;
-  line-height: 50px;
   border-radius: 12px;
   background-color: #5b0465;
   color: white;
@@ -411,7 +410,7 @@ main .overlay {
   left: 0;
   visibility: hidden;
   opacity: 0;
-  transition-duration: 1s;
+  transition-duration: 500ms;
   pointer-events: none;
 }
 main .overlay.active {
@@ -423,8 +422,8 @@ main .overlay.active {
 main .acessar-conta {
   visibility: hidden;
   opacity: 0;
-  width: 400px;
-  height: 500px;
+  width: 25em;
+  height: 30em;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -433,8 +432,7 @@ main .acessar-conta {
   color: white;
   border-radius: 12px;
   padding: 20px;
-  transition-delay: 500ms;
-  transition-duration: 1s;
+  transition-duration: 400ms;
   transition-timing-function: ease-in-out;
 }
 main .acessar-conta.active {
@@ -681,7 +679,7 @@ footer .direitos p {
   }
   main .banner {
     width: 100%;
-    height: 100vh;
+    height: 87vh !important;
     box-shadow: none;
     border-radius: 0;
     height: 100vh;
@@ -690,7 +688,7 @@ footer .direitos p {
   }
   main .banner .texto {
     width: 100%;
-    height: 200px;
+    height: 250px;
     position: absolute;
     top: 20px;
     left: 0;
@@ -698,19 +696,19 @@ footer .direitos p {
   }
   main .banner .texto h1 {
     width: 80%;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-align: center;
   }
   main .banner .imagem {
     position: absolute;
     width: 70%;
-    height: 40%;
+    height: 35%;
     left: 15%;
-    top: 40%;
+    top: 55%;
   }
   main .servicos {
     width: 100%;
-    height: 200vh;
+    height: 170vh;
   }
   main .servicos .imagem {
     width: 100%;
@@ -804,9 +802,9 @@ footer .direitos p {
     background-position: center;
   }
   main .formulario .beneficions {
+    width: 100%;
     height: 300px;
     padding: 20px;
-    width: 100%;
     background-color: black;
     border-radius: 28px;
     display: flex;
@@ -848,7 +846,7 @@ footer .direitos p {
     border-radius: 0px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
     background-color: #383939;
     border: none;
     position: relative;
@@ -857,15 +855,14 @@ footer .direitos p {
   }
   main .formulario form h1 {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     text-align: center;
-    height: auto;
   }
   main .formulario form input {
     width: 100%;
     margin: 0 auto;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     border-radius: 8px;
     background-color: rgb(98, 93, 93);
     padding-left: 20px;
@@ -1031,37 +1028,39 @@ footer .direitos p {
     justify-content: space-between;
     background: #e79128;
     transition-duration: 1s;
-    padding: 0;
+    padding: 0 10px;
     box-sizing: border-box;
   }
   header .logo {
-    width: 30%;
-    overflow: hidden;
-  }
-  header .logo img {
-    width: 100%;
+    width: 7em;
   }
   header .hamburguer {
     visibility: visible;
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 500ms;
+    z-index: 10000;
   }
   header .hamburguer .barra {
-    width: 25px;
-    transition-duration: 1s;
+    width: 35px;
+    transition-duration: 500ms;
   }
   header nav {
     visibility: hidden;
     opacity: 0;
     position: absolute;
     padding: 0;
-    width: 100vw;
+    width: 0%;
     height: 100vh;
     background-color: #dca443;
-    left: 0;
+    right: 0;
     top: 13vh;
     text-align: center;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition-duration: 500ms;
   }
   header nav a {
     color: black;
@@ -1069,15 +1068,17 @@ footer .direitos p {
   }
   header nav ul {
     margin-top: 10%;
-    width: 100%;
-    height: 20%;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
   header .active {
+    width: 50%;
     visibility: visible;
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 500ms;
     z-index: 10000;
     display: flex;
     flex-direction: row;
@@ -1088,10 +1089,11 @@ footer .direitos p {
   }
   header .ativo {
     overflow-x: hidden;
+    transition-duration: 500ms;
   }
   header .ativo span:nth-child(1) {
     visibility: hidden;
-    transition-duration: 1s;
+    transition-duration: 500ms;
   }
   header .ativo span:nth-child(2) {
     position: absolute;
@@ -1099,6 +1101,7 @@ footer .direitos p {
     top: 30px;
     right: 10px;
     transform: rotate(45deg);
+    transition-duration: 500ms;
   }
   header .ativo span:nth-child(3) {
     position: absolute;
@@ -1106,248 +1109,71 @@ footer .direitos p {
     top: 30px;
     right: 10px;
     transform: rotate(-45deg);
-  }
-  main {
-    transition-duration: 1s;
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
+    transition-duration: 500ms;
   }
   main .banner {
-    width: 100vw;
-    box-shadow: none;
-    border-radius: 0;
+    width: 100%;
     height: 100vh;
-    background-color: #051d26;
-    position: relative;
   }
   main .banner .texto {
-    width: 90%;
-    height: 280px;
-    position: absolute;
-    top: -20px;
-    left: 4em;
-    margin: 0 auto;
+    width: 40%;
   }
   main .banner .texto h1 {
-    text-align: center;
-    width: 100%;
-    font-size: 1.7em;
+    font-size: 1.7rem;
   }
   main .banner .imagem {
-    position: absolute;
     width: 50%;
-    height: 50%;
-    left: 29%;
-    top: 45%;
+    height: 20em;
   }
   main .servicos {
-    width: 100%;
-    height: 1000px;
-    background: black;
+    position: relative;
+    justify-content: left;
   }
   main .servicos .imagem {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0;
-    background: rgb(6, 6, 6);
-    box-shadow: none;
+    width: 30em;
   }
   main .servicos .imagem h1 {
-    width: 16em;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    background-image: linear-gradient(to right, rgb(215, 194, 2), white);
-    color: transparent;
-    -webkit-background-clip: text;
-    position: absolute;
-    left: 5%;
-    top: 9%;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 40%;
-    height: 40%;
-    border-radius: 28px;
-    position: absolute;
-    left: 15px;
-    top: 30%;
-    box-shadow: 10px 5px 20px #034325;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 30%;
-    left: 53%;
+    top: 6.5%;
+    right: 0;
+    font-size: 1.4rem;
   }
   main .servicos .imagem .empresas {
-    width: 14em;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    color: rgb(161, 103, 4);
-    position: absolute;
-    left: 53%;
-    top: 9%;
-    text-align: left;
-    text-transform: uppercase;
+    top: 54%;
+    left: 10%;
+  }
+  main .servicos .imagem img {
+    width: 11em;
+    height: 11em;
   }
   main .servicos .pagamentos {
-    width: 250px;
-    height: 250px;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    top: 5px;
-  }
-  main .servicos .pagamentos img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
+    width: 17em;
+    height: 17em;
+    position: absolute;
+    top: 3%;
+    right: 0em;
   }
   main .servicos .app {
-    width: 250px;
-    height: 250px;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    bottom: 0px;
-  }
-  main .servicos .app img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .formulario {
-    width: 100%;
-    height: 1200px;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    gap: 0;
-    background-color: black;
-  }
-  main .formulario .beneficions {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
+    width: 17em;
+    height: 17em;
+    position: absolute;
+    bottom: 2%;
+    right: 0em;
   }
   main .formulario .beneficions .examples {
-    width: 80%;
-    height: 90%;
-    position: absolute;
-    left: 4rem;
-    top: 0;
-  }
-  main .formulario .beneficions .examples h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #ffffff;
-    position: absolute;
-  }
-  main .formulario .beneficions .examples img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    box-shadow: none;
-  }
-  main .formulario .beneficions a {
-    color: white;
-    font-size: 1.4rem;
-    line-height: 50px;
-  }
-  main .formulario .beneficions a:hover {
-    color: darkgreen;
+    width: 45%;
+    height: 25em;
+    left: 2%;
   }
   main .formulario form {
-    width: 500px;
-    height: 550px;
-    border-radius: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #383939;
-    border: none;
-    position: relative;
-    top: 0;
-    left: 0;
-    border-radius: 12px;
+    width: 45%;
+    height: 25em;
+    right: 2%;
   }
   main .formulario form h1 {
-    width: 100%;
     font-size: 0.8rem;
-    text-align: center;
-    height: auto;
-  }
-  main .formulario form input {
-    width: 100%;
-    margin: 0 auto;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    padding-left: 20px;
-  }
-  main .formulario form input::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form input::placeholder {
-    color: black;
-  }
-  main .formulario form input:focus {
-    background-color: gray;
-  }
-  main .formulario form textarea {
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    outline: none;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-  main .formulario form textarea::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form textarea::placeholder {
-    color: black;
-  }
-  main .formulario form textarea:focus {
-    background-color: gray;
   }
   main .formulario form label {
-    display: block;
     font-size: 0.8rem;
-  }
-  main .formulario form button {
-    width: 95%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 12px;
-    background-color: #5b0465;
-    color: white;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    cursor: pointer;
   }
   footer {
     max-width: 100vw;
@@ -1434,409 +1260,9 @@ footer .direitos p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  body {
-    max-width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    transition-duration: 400ms;
-  }
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
   header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: #e79128;
-    transition-duration: 1s;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  header .logo {
-    width: 10%;
-    overflow: hidden;
-  }
-  header .logo img {
-    width: 100%;
-  }
-  header .hamburguer {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-  }
-  header .hamburguer .barra {
-    width: 25px;
-    transition-duration: 1s;
-  }
-  header nav {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    padding: 0;
     width: 100vw;
-    height: 100vh;
-    background-color: #dca443;
-    left: 0;
-    top: 13vh;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  header nav a {
-    color: black;
-    font-size: 1.6rem;
-  }
-  header nav ul {
-    margin-top: 10%;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-  }
-  header .active {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 1s;
-    z-index: 10000;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  header .active a {
-    font-size: 1.4rem;
-  }
-  header .ativo {
-    overflow-x: hidden;
-  }
-  header .ativo span:nth-child(1) {
-    visibility: hidden;
-    transition-duration: 1s;
-  }
-  header .ativo span:nth-child(2) {
-    position: absolute;
-    width: 30px;
-    top: 30px;
-    right: 10px;
-    transform: rotate(45deg);
-  }
-  header .ativo span:nth-child(3) {
-    position: absolute;
-    width: 30px;
-    top: 30px;
-    right: 10px;
-    transform: rotate(-45deg);
-  }
-  main {
-    transition-duration: 1s;
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-  main .banner {
-    width: 100vw;
-    box-shadow: none;
-    border-radius: 0;
-    height: 650px !important;
-    background-color: #051d26;
-    position: relative;
-  }
-  main .banner .texto {
-    width: 90%;
-    height: 280px;
-    position: absolute;
-    top: -20px;
-    left: 4em;
-    margin: 0 auto;
-  }
-  main .banner .texto h1 {
-    text-align: center;
-    width: 100%;
-    font-size: 2.3em;
-  }
-  main .banner .imagem {
-    position: absolute;
-    width: 35% !important;
-    height: 50% !important;
-    left: 34% !important;
-    top: 45% !important;
-  }
-  main .servicos {
-    width: 100%;
-    height: 1000px;
-    background: black;
-  }
-  main .servicos .imagem {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0;
-    background: rgb(6, 6, 6);
-    box-shadow: none;
-  }
-  main .servicos .imagem h1 {
-    width: 30% !important;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    background-image: linear-gradient(to right, rgb(215, 194, 2), white);
-    color: transparent;
-    -webkit-background-clip: text;
-    position: absolute;
-    left: 15% !important;
-    top: 55% !important;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 40% !important;
-    height: 45% !important;
-    border-radius: 28px;
-    position: absolute;
-    left: 10%;
-    top: 5% !important;
-    box-shadow: 10px 5px 20px #034325;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 5% !important;
-    left: 53%;
-  }
-  main .servicos .imagem .empresas {
-    width: 40% !important;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    color: rgb(161, 103, 4);
-    position: absolute;
-    left: 55% !important;
-    top: 9%;
-    text-align: left;
-    text-transform: uppercase;
-  }
-  main .servicos .pagamentos {
-    width: 40%;
-    height: 35%;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    top: -250px;
-    left: 30px;
-  }
-  main .servicos .pagamentos img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .servicos .app {
-    width: 40%;
-    height: 35%;
-    border-radius: 12px;
-    box-shadow: 1px 20px 30px black;
-    position: relative;
-    top: -250px;
-  }
-  main .servicos .app img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    margin: 0 auto;
-    display: block;
-  }
-  main .formulario {
-    width: 100%;
-    height: 600px !important;
-    flex-direction: column;
-    background-image: url("../../images/models/um cartao sem fronteiras.jpg") !important;
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  main .formulario .beneficions {
-    display: none !important;
-  }
-  main .formulario form {
-    align-self: center;
-    width: 450px;
-    height: 550px;
-    border-radius: 12px !important;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: transparent !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-            backdrop-filter: blur(20px) !important;
-    border: none;
-    border-radius: 12px;
-    position: absolute;
-    right: 25%;
-    top: 20px;
-  }
-  main .formulario form h1 {
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    height: auto;
-    color: black;
-    font-weight: bold;
-  }
-  main .formulario form input {
-    width: 100%;
-    margin: 0 auto;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    padding-left: 20px;
-    outline: none;
-    border: none;
-    transition-duration: 400ms;
-  }
-  main .formulario form input::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form input::placeholder {
-    color: black;
-  }
-  main .formulario form input:focus {
-    background-color: gray;
-  }
-  main .formulario form textarea {
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    outline: none;
-    padding-left: 20px;
-    padding-top: 10px;
-    transition-duration: 400ms;
-  }
-  main .formulario form textarea::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form textarea::placeholder {
-    color: black;
-  }
-  main .formulario form textarea:focus {
-    background-color: gray;
-  }
-  main .formulario form label {
-    display: block;
-    font-size: 1rem;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-  }
-  main .formulario form button {
-    width: 100%;
-    margin: 0 auto;
-    height: 60px;
-    line-height: 50px;
-    border-radius: 12px;
-    background-color: #5b0465;
-    color: white;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  footer {
-    max-width: 100vw;
-    box-sizing: border-box;
-    height: 500px;
-    position: relative;
-    overflow-x: hidden;
-  }
-  footer .social {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 220px;
-  }
-  footer .social a:hover {
-    transition-duration: 400ms;
-    transform: scale(1.3);
-  }
-  footer .social a:hover .azul {
-    transition-duration: 400ms;
-    color: #00bfff;
-  }
-  footer .social a:hover .azulF {
-    transition-duration: 400ms;
-    color: #3b5998;
-  }
-  footer .social a:hover .inst {
-    color: #f32a4b;
-  }
-  footer .social a i {
-    color: white;
-    font-size: 2rem;
-  }
-  footer .endereco {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top: 300px;
-  }
-  footer .endereco a {
-    color: white;
-    font-size: 1.8rem;
-  }
-  footer .endereco a i {
-    font-size: 1.8rem;
-    color: rgb(255, 128, 0);
-  }
-  footer .endereco a:hover {
-    transition-duration: 600ms;
-    text-decoration: underline;
-    color: green;
-  }
-  footer .logoRodape {
-    display: block !important;
-    position: absolute;
-    width: 500px;
-    height: 200px;
-    left: 35%;
-  }
-  footer .logoRodape img {
-    position: absolute;
-    display: block;
-    width: 35%;
-    height: 90%;
-    border-radius: 50%;
-    top: 0px;
-    margin: 10px auto;
-  }
-  footer .direitos {
-    width: 80%;
-    text-align: center;
-    display: block;
-    border: none;
-    position: absolute;
-    bottom: 50px;
-  }
-  footer .direitos p {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 1025px) and (max-width: 1400px) {
-  body {
-    max-width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-  header {
-    width: 100% !important;
     height: 13vh;
     background: linear-gradient(to right, #ff914c, #e79128);
     display: flex;
@@ -1844,57 +1270,14 @@ footer .direitos p {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 80px;
-    /*------------------------------------------------------------CONFIGURACAO DO MENU HAMBURGUER--------------------------------------------------------*/
+    padding: 0 2em;
     /*-----------------------------------------------------------------CONFIGURACAO DA NAVBAR-----------------------------------------------------------------*/
   }
   header .logo {
-    width: 100px;
+    width: 9em;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
-  }
-  header .logo img {
-    width: 100%;
-    height: 100%;
-  }
-  header .hamburguer {
-    visibility: hidden;
-    opacity: 0;
-    width: 40px;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    overflow-x: hidden;
-  }
-  header .hamburguer .barra {
-    display: block;
-    width: 80%;
-    height: 4px;
-    background-color: black;
-    border-radius: 20%;
-  }
-  header .ativo {
-    overflow-x: hidden;
-  }
-  header .ativo span:nth-child(1) {
-    display: none;
-  }
-  header .ativo span:nth-child(2) {
-    position: absolute;
-    width: 30px;
-    top: 40px;
-    right: 20px;
-    transform: rotate(45deg);
-  }
-  header .ativo span:nth-child(3) {
-    position: absolute;
-    width: 30px;
-    top: 40px;
-    right: 20px;
-    transform: rotate(-45deg);
   }
   header nav {
     width: 50%;
@@ -1902,7 +1285,7 @@ footer .direitos p {
   header nav a {
     color: white;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   header nav a:hover {
     color: #d60f62;
@@ -1911,401 +1294,148 @@ footer .direitos p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
-  }
-  main {
-    width: 100%;
-    overflow-x: hidden;
+    gap: 5px;
   }
   main .banner {
+    width: 100%;
+    max-height: 100vh;
+  }
+  main .banner .texto {
+    width: 45%;
+  }
+  main .banner .texto h1 {
+    font-size: 2.3rem;
+  }
+  main .banner .imagem {
+    width: 45%;
+    height: 30em;
+  }
+  main .servicos {
+    position: relative;
+    justify-content: left;
+  }
+  main .servicos .imagem {
+    width: 40em;
+  }
+  main .servicos .imagem h1 {
+    top: 10%;
+  }
+  main .servicos .imagem .empresas {
+    top: 58%;
+  }
+  main .servicos .imagem img {
+    width: 14em;
+    height: 14em;
+  }
+  main .servicos .pagamentos {
+    width: 17em;
+    height: 17em;
+    position: absolute;
+    top: 3%;
+    right: 5em;
+  }
+  main .servicos .app {
+    width: 17em;
+    height: 17em;
+    position: absolute;
+    top: 52%;
+    right: 5em;
+  }
+  main .formulario .beneficions .examples {
+    width: 40%;
+    height: 80%;
+    left: 5%;
+  }
+  main .formulario form {
+    width: 40%;
+    height: 80%;
+    right: 5%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  header {
+    width: 100vw;
+    height: 13vh;
+    background: linear-gradient(to right, #ff914c, #e79128);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 0 80px;
-    background-color: #031220;
-    border-radius: 12px;
-    box-shadow: 10px 1px 40px rgba(255, 255, 255, 0.431372549);
-    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0 2em;
   }
-  main .banner .texto {
-    width: 52%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation-name: background;
-  }
-  main .banner .texto h1 {
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 40px;
-    background-image: linear-gradient(40deg, #da862d, #54087b);
-    color: transparent;
-    -webkit-background-clip: text;
-  }
-  main .banner .imagem {
-    width: 35%;
-    height: 70%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    top: 0px;
-    animation-name: background;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-  }
-  main .banner .imagem img {
-    display: block;
-    width: 85%;
-    height: 85%;
-    border-radius: 50%;
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    animation-name: background;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-  }
-  main .servicos {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    background-image: url("../../images/models/wave.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    box-shadow: 1px 20px 15px rgba(246, 165, 4, 0.462745098);
-  }
-  main .servicos .imagem {
-    width: 45%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 28px;
-    background: linear-gradient(to bottom, rgba(140, 99, 10, 0.5450980392), rgba(198, 211, 148, 0.537254902));
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .imagem h1 {
-    width: 40%;
-    letter-spacing: 2px;
-    font-size: 24px;
-    background-image: linear-gradient(to right, rgb(77, 215, 2), white);
-    color: transparent;
-    -webkit-background-clip: text;
-    position: absolute;
-    right: 20px;
-    top: 30px;
-  }
-  main .servicos .imagem img {
-    display: block;
-    width: 250px;
-    height: 230px;
-    border-radius: 28px;
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    box-shadow: 10px 5px 20px rgba(255, 255, 255, 0.2392156863);
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .imagem .imagem2 {
-    position: absolute;
-    top: 250px;
-    left: 50%;
-    height: 250px;
-  }
-  main .servicos .imagem .empresas {
-    width: 40%;
-    left: 50px;
-    top: 310px;
-  }
-  main .servicos .pagamentos {
-    width: 300px;
-    height: 300px;
-    border-radius: 28px;
-    box-shadow: 1px 20px 30px black;
-    overflow: hidden;
-  }
-  main .servicos .pagamentos a {
-    position: relative;
-    width: 100%;
+  header .logo {
+    width: 9em;
     height: 100%;
-    display: block;
+    box-sizing: border-box;
     overflow: hidden;
   }
-  main .servicos .pagamentos a::after {
-    content: "";
-    width: 150%;
-    height: 20%;
-    position: absolute;
-    left: -150%;
-    top: 30%;
-    background-color: rgba(255, 255, 255, 0.5294117647);
-    transform: skewY(45deg);
-    transition-duration: 0.8s;
+  header nav {
+    width: 50%;
   }
-  main .servicos .pagamentos a:hover::after {
-    left: 100%;
-  }
-  main .servicos .pagamentos img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    border-radius: 28px;
-  }
-  main .servicos .app {
-    width: 300px;
-    height: 300px;
-    border-radius: 28px;
-    box-shadow: 1px 20px 30px black;
-  }
-  main .servicos .app a {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-  }
-  main .servicos .app a::after {
-    content: "";
-    width: 150%;
-    height: 20%;
-    position: absolute;
-    left: -150%;
-    top: 30%;
-    background-color: rgba(246, 255, 0, 0.5294117647);
-    transform: skewY(45deg);
-    transition-duration: 0.8s;
-  }
-  main .servicos .app a:hover::after {
-    left: 100%;
-  }
-  main .servicos .app img {
-    display: block;
-    width: 100%;
-    border-radius: 28px;
-  }
-  main .formulario {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #2b222c;
-    position: relative;
-  }
-  main .formulario .beneficions {
-    width: 100%;
-    height: 100%;
-    background-image: url("../../images/models/pexels-pixabay-50987.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 28px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-  }
-  main .formulario .beneficions .examples {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    left: 100px;
-  }
-  main .formulario .beneficions .examples h1 {
-    text-align: center;
-    font-size: 36px;
-    color: #ffffff;
-    position: absolute;
-  }
-  main .formulario .beneficions .examples img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    border-radius: 28px;
-    box-shadow: 1px 10px 30px 10px #43223c;
-  }
-  main .formulario .beneficions a {
-    color: white;
-    font-size: 1.4rem;
-    line-height: 50px;
-  }
-  main .formulario .beneficions a:hover {
-    color: darkgreen;
-  }
-  main .formulario form {
-    width: 500px;
-    height: 510px;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    background-color: #383939;
-    border: 3px dashed #991818;
-    box-shadow: 1px 10px 30px black;
-    position: absolute;
-    right: 100px;
-  }
-  main .formulario form h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    height: 50px;
-  }
-  main .formulario form input {
-    width: 95%;
-    margin: 0 auto;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    padding-left: 20px;
-    outline: none;
-    border: none;
-  }
-  main .formulario form input::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form input::placeholder {
-    color: black;
-  }
-  main .formulario form input:focus {
-    background-color: gray;
-  }
-  main .formulario form textarea {
-    width: 95%;
-    height: 20%;
-    margin: 0 auto;
-    border-radius: 8px;
-    background-color: rgb(98, 93, 93);
-    outline: none;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-  main .formulario form textarea::-moz-placeholder {
-    color: black;
-  }
-  main .formulario form textarea::placeholder {
-    color: black;
-  }
-  main .formulario form textarea:focus {
-    background-color: gray;
-  }
-  main .formulario form label {
-    display: block;
-    height: 25px;
-  }
-  main .formulario form button {
-    width: 95%;
-    margin: 0 auto;
-    height: 60px;
-    line-height: 50px;
-    border-radius: 12px;
-    background-color: #5b0465;
+  header nav a {
     color: white;
     font-weight: bold;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    font-size: 1.2rem;
   }
-  footer {
-    width: 100%;
-    height: 300px;
-    background-color: #484450;
+  header nav a:hover {
+    color: #d60f62;
+  }
+  header nav ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    color: white;
-    overflow-x: hidden !important;
+    justify-content: space-between;
+    gap: 5px;
   }
-  footer .social {
-    width: 350px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-  footer .social a:hover {
-    transition-duration: 400ms;
-    transform: scale(1.2);
-  }
-  footer .social a:hover .azul {
-    transition-duration: 400ms;
-    color: #00bfff;
-  }
-  footer .social a:hover .azulF {
-    transition-duration: 400ms;
-    color: #3b5998;
-  }
-  footer .social a:hover .inst {
-    color: #f32a4b;
-  }
-  footer .social i {
-    color: white;
-    font-size: 2.5rem;
-  }
-  footer .endereco {
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  footer .endereco a {
-    color: white;
-    font-size: 1.7rem;
-  }
-  footer .endereco a i {
-    font-size: 1.7rem;
-    color: rgb(255, 128, 0);
-  }
-  footer .endereco a:hover {
-    transition-duration: 600ms;
-    text-decoration: underline;
-    color: green;
-  }
-  footer .logoRodape {
-    width: 200px;
-    box-sizing: border-box;
-    height: 210px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 80px;
-  }
-  footer .logoRodape img {
-    display: block;
+  main .banner {
     width: 100%;
-    height: 60%;
-    border-radius: 50%;
-    margin: 0 auto;
+    max-height: 100vh;
   }
-  footer .direitos {
-    width: 100%;
-    text-align: center;
-    display: block;
+  main .banner .texto {
+    width: 45%;
   }
-  footer .direitos p {
-    font-size: 1.5rem;
+  main .banner .texto h1 {
+    font-size: 2.3rem;
+  }
+  main .banner .imagem {
+    width: 45%;
+    height: 30em;
+  }
+  main .servicos {
+    position: relative;
+    justify-content: left;
+  }
+  main .servicos .imagem {
+    width: 40em;
+  }
+  main .servicos .imagem h1 {
+    top: 10%;
+  }
+  main .servicos .imagem .empresas {
+    top: 58%;
+  }
+  main .servicos .imagem img {
+    width: 14em;
+    height: 14em;
+  }
+  main .servicos .pagamentos {
+    margin-left: 2em;
+    width: 23em;
+    height: 23em;
+  }
+  main .servicos .app {
+    margin-left: 1.3em;
+    width: 23em;
+    height: 23em;
+  }
+  main .formulario .beneficions .examples {
+    width: 34em;
+    height: 34em;
+    left: 3em;
+  }
+  main .formulario form {
+    width: 34em;
+    height: 34em;
   }
 }
 * {
@@ -2317,6 +1447,10 @@ footer .direitos p {
   font-size: 1rem;
   font-family: "Lora", serif;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
