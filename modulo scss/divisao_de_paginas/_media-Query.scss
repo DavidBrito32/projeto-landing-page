@@ -29,7 +29,7 @@
       opacity: 1;
       transition-duration: 400ms;
       .barra {
-        width: 25px;
+        width: 40px;
         transition-duration: 400ms;
       }
     }
@@ -93,29 +93,29 @@
         width: 100%;
         height: 250px;
         position: absolute;
-        top: 20px;
+        top: 0;
         left: 0;
         margin: 0 auto;
 
         h1 {
-          width: 80%;
-          font-size: 1.4rem;
+          width: 96%;
+          font-size: 1.5em;
           text-align: center;
         }
       }
 
       .imagem {
         position: absolute;
-        width: 70%;
-        height: 35%;
-        left: 15%;
-        top: 55%;
+        width: 90%;
+        height: 45%;
+        left: 6%;
+        top: 45%;
       }
     }
 
     .servicos {
       width: 100%;
-      height: 170vh;
+      height: 155vh;
 
       .imagem {
         width: 100%;
@@ -145,11 +145,11 @@
         img {
           display: block;
           width: 50%;
-          height: 40%;
+          height: 45%;
           border-radius: 12px;
           position: absolute;
           left: 5px;
-          top: 20px;
+          top: 10px;
           box-shadow: 10px 5px 20px #034325;
         }
 
@@ -174,7 +174,7 @@
 
       .pagamentos {
         width: 100%;
-        height: 50vh;
+        height: 47vh;
         border-radius: 12px;
         box-shadow: 1px 20px 30px black;
         position: relative;
@@ -191,7 +191,7 @@
 
       .app {
         width: 100%;
-        height: 50vh;
+        height: 47vh;
         border-radius: 12px;
         box-shadow: 1px 20px 30px black;
         position: relative;
@@ -209,7 +209,7 @@
 
     .formulario {
       width: 100%;
-      height: 900px;
+      height: 155vh;
       flex-direction: column;
       padding: 0;
       margin: 0;
@@ -220,7 +220,7 @@
 
       .beneficions {
         width: 100%;
-        height: 300px;
+        height: 380px;
         padding: 20px;
         background-color: black;
         border-radius: 28px;
@@ -264,7 +264,7 @@
 
       form {
         width: 100%;
-        height: 540px;
+        height: 530px;
         border-radius: 0px;
         display: flex;
         flex-direction: column;
@@ -277,7 +277,7 @@
 
         h1 {
           width: 100%;
-          font-size: 1.1rem;
+          font-size: 1.4em;
           text-align: center;
         }
 
@@ -319,14 +319,13 @@
 
         label {
           display: block;
-          font-size: 0.9rem;
+          font-size: 1.2rem;
         }
 
         button {
           width: 95%;
           margin: 0 auto;
           height: 50px;
-          line-height: 50px;
           border-radius: 12px;
           background-color: #5b0465;
           color: white;
@@ -334,6 +333,7 @@
           outline: none;
           border: none;
           cursor: pointer;
+          font-size: 1.2rem;
         }
       }
     }
@@ -375,7 +375,7 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: 115px;
+      top: 155px;
 
       a {
         &:hover {
@@ -398,7 +398,7 @@
 
         i {
           color: white;
-          font-size: 1.4rem;
+          font-size: 1.9rem;
         }
       }
     }
@@ -428,7 +428,7 @@
     .logoRodape {
       width: 100%;
       box-sizing: border-box;
-      height: 100px;
+      height: 150px;
       display: flex;
       justify-content: center;
       padding: 0;
@@ -438,7 +438,7 @@
       img {
         position: absolute;
         display: block;
-        width: 30%;
+        width: 40%;
         height: 90%;
         border-radius: 50%;
         top: 0px;
@@ -749,7 +749,7 @@
   }
 } //-> OK
 
-@media only screen and (min-width: 768px) and (max-width: 1300px) {
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -800,7 +800,7 @@
       }
 
       .imagem {
-        width: 45%;
+        width: 50%;
         height: 30em;
       }
     }
@@ -860,7 +860,7 @@
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1301px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -870,7 +870,7 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 2em;
+    padding: 0 3em;
 
     .logo {
       width: 9em;
@@ -879,7 +879,7 @@
       overflow: hidden;
     }
     nav {
-      width: 50%;
+      width: 40%;
       a {
         color: white;
         font-weight: bold;
@@ -910,7 +910,7 @@
       }
 
       .imagem {
-        width: 45%;
+        width: 40%;
         height: 30em;
       }
     }
@@ -919,19 +919,28 @@
       position: relative;
       justify-content: left;
       .imagem {
-        width: 40em;
+        width: 35em;
 
         h1 {
+          width: 50%;
+          right: 0px;
           top: 10%;
+          font-size: 1.3rem;
         }
 
         .empresas {
           top: 58%;
+          left: 10%;
         }
 
         img {
-          width: 14em;
+          width: 15em;
           height: 14em;
+          left: 10px;
+        }
+
+        .imagem2{
+          left: 50%;
         }
       }
 
@@ -942,7 +951,7 @@
       }
 
       .app {
-        margin-left: 1.3em;
+        margin-left: 1.5em;
         width: 23em;
         height: 23em;
       }

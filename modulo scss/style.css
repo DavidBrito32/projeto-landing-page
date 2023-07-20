@@ -33,6 +33,7 @@ header .hamburguer {
   cursor: pointer;
   overflow-x: hidden;
   transition-duration: 1s;
+  margin-right: 20px;
 }
 header .hamburguer .barra {
   display: block;
@@ -51,16 +52,16 @@ header .ativo span:nth-child(1) {
 }
 header .ativo span:nth-child(2) {
   position: absolute;
-  width: 30px;
-  top: 30px;
-  right: 10px;
+  width: 40px;
+  top: 55px;
+  right: 30px;
   transform: rotate(45deg);
 }
 header .ativo span:nth-child(3) {
   position: absolute;
-  width: 30px;
-  top: 30px;
-  right: 10px;
+  width: 40px;
+  top: 55px;
+  right: 30px;
   transform: rotate(-45deg);
 }
 header nav {
@@ -633,7 +634,7 @@ footer .direitos p {
     transition-duration: 400ms;
   }
   header .hamburguer .barra {
-    width: 25px;
+    width: 40px;
     transition-duration: 400ms;
   }
   header nav {
@@ -690,25 +691,25 @@ footer .direitos p {
     width: 100%;
     height: 250px;
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     margin: 0 auto;
   }
   main .banner .texto h1 {
-    width: 80%;
-    font-size: 1.4rem;
+    width: 96%;
+    font-size: 1.5em;
     text-align: center;
   }
   main .banner .imagem {
     position: absolute;
-    width: 70%;
-    height: 35%;
-    left: 15%;
-    top: 55%;
+    width: 90%;
+    height: 45%;
+    left: 6%;
+    top: 45%;
   }
   main .servicos {
     width: 100%;
-    height: 170vh;
+    height: 155vh;
   }
   main .servicos .imagem {
     width: 100%;
@@ -737,11 +738,11 @@ footer .direitos p {
   main .servicos .imagem img {
     display: block;
     width: 50%;
-    height: 40%;
+    height: 45%;
     border-radius: 12px;
     position: absolute;
     left: 5px;
-    top: 20px;
+    top: 10px;
     box-shadow: 10px 5px 20px #034325;
   }
   main .servicos .imagem .imagem2 {
@@ -762,7 +763,7 @@ footer .direitos p {
   }
   main .servicos .pagamentos {
     width: 100%;
-    height: 50vh;
+    height: 47vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
@@ -777,7 +778,7 @@ footer .direitos p {
   }
   main .servicos .app {
     width: 100%;
-    height: 50vh;
+    height: 47vh;
     border-radius: 12px;
     box-shadow: 1px 20px 30px black;
     position: relative;
@@ -792,7 +793,7 @@ footer .direitos p {
   }
   main .formulario {
     width: 100%;
-    height: 900px;
+    height: 155vh;
     flex-direction: column;
     padding: 0;
     margin: 0;
@@ -803,7 +804,7 @@ footer .direitos p {
   }
   main .formulario .beneficions {
     width: 100%;
-    height: 300px;
+    height: 380px;
     padding: 20px;
     background-color: black;
     border-radius: 28px;
@@ -842,7 +843,7 @@ footer .direitos p {
   }
   main .formulario form {
     width: 100%;
-    height: 540px;
+    height: 530px;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -855,7 +856,7 @@ footer .direitos p {
   }
   main .formulario form h1 {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.4em;
     text-align: center;
   }
   main .formulario form input {
@@ -899,13 +900,12 @@ footer .direitos p {
   }
   main .formulario form label {
     display: block;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   main .formulario form button {
     width: 95%;
     margin: 0 auto;
     height: 50px;
-    line-height: 50px;
     border-radius: 12px;
     background-color: #5b0465;
     color: white;
@@ -913,6 +913,7 @@ footer .direitos p {
     outline: none;
     border: none;
     cursor: pointer;
+    font-size: 1.2rem;
   }
   main .acessar-conta {
     width: 100%;
@@ -946,7 +947,7 @@ footer .direitos p {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 115px;
+    top: 155px;
   }
   footer .social a:hover {
     transition-duration: 400ms;
@@ -965,7 +966,7 @@ footer .direitos p {
   }
   footer .social a i {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
   footer .endereco {
     width: 80%;
@@ -990,7 +991,7 @@ footer .direitos p {
   footer .logoRodape {
     width: 100%;
     box-sizing: border-box;
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -1000,7 +1001,7 @@ footer .direitos p {
   footer .logoRodape img {
     position: absolute;
     display: block;
-    width: 30%;
+    width: 40%;
     height: 90%;
     border-radius: 50%;
     top: 0px;
@@ -1260,7 +1261,7 @@ footer .direitos p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1300px) {
+@media only screen and (min-width: 769px) and (max-width: 1300px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -1307,7 +1308,7 @@ footer .direitos p {
     font-size: 2.3rem;
   }
   main .banner .imagem {
-    width: 45%;
+    width: 50%;
     height: 30em;
   }
   main .servicos {
@@ -1352,7 +1353,7 @@ footer .direitos p {
     right: 5%;
   }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1301px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -1362,7 +1363,7 @@ footer .direitos p {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 2em;
+    padding: 0 3em;
   }
   header .logo {
     width: 9em;
@@ -1371,7 +1372,7 @@ footer .direitos p {
     overflow: hidden;
   }
   header nav {
-    width: 50%;
+    width: 40%;
   }
   header nav a {
     color: white;
@@ -1398,7 +1399,7 @@ footer .direitos p {
     font-size: 2.3rem;
   }
   main .banner .imagem {
-    width: 45%;
+    width: 40%;
     height: 30em;
   }
   main .servicos {
@@ -1406,17 +1407,25 @@ footer .direitos p {
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 40em;
+    width: 35em;
   }
   main .servicos .imagem h1 {
+    width: 50%;
+    right: 0px;
     top: 10%;
+    font-size: 1.3rem;
   }
   main .servicos .imagem .empresas {
     top: 58%;
+    left: 10%;
   }
   main .servicos .imagem img {
-    width: 14em;
+    width: 15em;
     height: 14em;
+    left: 10px;
+  }
+  main .servicos .imagem .imagem2 {
+    left: 50%;
   }
   main .servicos .pagamentos {
     margin-left: 2em;
@@ -1424,7 +1433,7 @@ footer .direitos p {
     height: 23em;
   }
   main .servicos .app {
-    margin-left: 1.3em;
+    margin-left: 1.5em;
     width: 23em;
     height: 23em;
   }

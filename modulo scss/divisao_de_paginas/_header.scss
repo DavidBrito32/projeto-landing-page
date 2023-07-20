@@ -34,6 +34,7 @@ header{
     cursor: pointer;
     overflow-x: hidden;
     transition-duration: 1s;
+    margin-right: 20px;
         .barra{
             display: block;
             width: 80%;
@@ -54,17 +55,17 @@ header{
 
     span:nth-child(2){
         position: absolute;
-        width: 30px;
-        top: 30px;
-        right: 10px;
+        width: 40px;
+        top: 55px;
+        right: 30px;
         transform: rotate(45deg);
     }
 
     span:nth-child(3){
         position: absolute;
-        width: 30px;
-        top: 30px;
-        right: 10px;
+        width: 40px;
+        top: 55px;
+        right: 30px;
         transform: rotate(-45deg);
     }
 }
