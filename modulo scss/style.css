@@ -44,7 +44,7 @@ header .hamburguer .barra {
 }
 header .ativo {
   overflow-x: hidden;
-  transition-duration: 1s;
+  transition-duration: 400ms;
 }
 header .ativo span:nth-child(1) {
   width: 0%;
@@ -637,6 +637,13 @@ footer .direitos p {
     width: 40px;
     transition-duration: 400ms;
   }
+  header .ativo {
+    overflow-x: hidden;
+    transition-duration: 500ms;
+  }
+  header .ativo span:nth-child(1) {
+    display: none;
+  }
   header nav {
     visibility: hidden;
     opacity: 0;
@@ -703,7 +710,7 @@ footer .direitos p {
   main .banner .imagem {
     position: absolute;
     width: 90%;
-    height: 45%;
+    height: 40%;
     left: 6%;
     top: 45%;
   }
@@ -1093,28 +1100,27 @@ footer .direitos p {
     transition-duration: 500ms;
   }
   header .ativo span:nth-child(1) {
-    visibility: hidden;
-    transition-duration: 500ms;
+    display: none;
   }
   header .ativo span:nth-child(2) {
     position: absolute;
-    width: 30px;
-    top: 30px;
-    right: 10px;
+    width: 40px;
+    top: 50px;
+    right: 40px;
     transform: rotate(45deg);
     transition-duration: 500ms;
   }
   header .ativo span:nth-child(3) {
     position: absolute;
-    width: 30px;
-    top: 30px;
-    right: 10px;
+    width: 40px;
+    top: 50px;
+    right: 40px;
     transform: rotate(-45deg);
     transition-duration: 500ms;
   }
   main .banner {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
   }
   main .banner .texto {
     width: 40%;
@@ -1123,20 +1129,22 @@ footer .direitos p {
     font-size: 1.7rem;
   }
   main .banner .imagem {
-    width: 50%;
-    height: 20em;
+    width: 55%;
+    height: 45%;
   }
   main .servicos {
     position: relative;
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 30em;
+    width: 55%;
+    height: 70%;
+    left: 0;
   }
   main .servicos .imagem h1 {
     top: 6.5%;
-    right: 0;
-    font-size: 1.4rem;
+    right: 20px;
+    font-size: 1.2rem;
   }
   main .servicos .imagem .empresas {
     top: 54%;
@@ -1145,20 +1153,24 @@ footer .direitos p {
   main .servicos .imagem img {
     width: 11em;
     height: 11em;
+    left: 0;
+  }
+  main .servicos .imagem .imagem2 {
+    left: 50%;
   }
   main .servicos .pagamentos {
-    width: 17em;
-    height: 17em;
+    width: 40%;
+    height: 35%;
     position: absolute;
-    top: 3%;
+    top: 12%;
     right: 0em;
   }
   main .servicos .app {
-    width: 17em;
-    height: 17em;
+    width: 40%;
+    height: 35%;
     position: absolute;
-    bottom: 2%;
-    right: 0em;
+    bottom: 12%;
+    right: 0%;
   }
   main .formulario .beneficions .examples {
     width: 45%;
@@ -1399,18 +1411,19 @@ footer .direitos p {
     font-size: 2.3rem;
   }
   main .banner .imagem {
-    width: 40%;
-    height: 30em;
+    width: 35%;
+    height: 60%;
   }
   main .servicos {
     position: relative;
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 35em;
+    width: 35%;
+    height: 70%;
   }
   main .servicos .imagem h1 {
-    width: 50%;
+    width: 40%;
     right: 0px;
     top: 10%;
     font-size: 1.3rem;
@@ -1429,22 +1442,23 @@ footer .direitos p {
   }
   main .servicos .pagamentos {
     margin-left: 2em;
-    width: 23em;
-    height: 23em;
+    width: 30%;
+    height: 60%;
   }
   main .servicos .app {
     margin-left: 1.5em;
-    width: 23em;
-    height: 23em;
+    width: 30%;
+    height: 60%;
   }
   main .formulario .beneficions .examples {
     width: 34em;
-    height: 34em;
-    left: 3em;
+    height: 40em;
+    left: 20%;
   }
   main .formulario form {
     width: 34em;
-    height: 34em;
+    height: 40em;
+    right: 15%;
   }
 }
 * {
