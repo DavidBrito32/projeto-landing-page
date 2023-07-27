@@ -1,132 +1,41 @@
-# Landing Page
-Nesse projeto, nosso objetivo é criar uma **Landing Page**, ou seja, um site de **apenas uma página** cujo objetivo é atrair clientes e despertar curiosidade e interesse nos serviços e/ou produtos de uma empresa.
-Durante a construção desse site, serão estudados e praticados os seguintes conteúdos:
-* HTML
-* CSS
-	* Flex
-	* Grid
-* DOM 
+A F4BANK é uma inovadora e dinâmica instituição financeira, dedicada a oferecer soluções financeiras inteligentes e personalizadas para clientes em todo o mundo. Fundada em 2004, nossa empresa tem se destacado no setor financeiro por meio de uma abordagem visionária, tecnológica e centrada no cliente, promovendo o bem-estar financeiro e a prosperidade de nossos clientes.
 
-# Enunciado
-Você deverá desenvolver uma Landing Page para uma das empresas fictícias apresentadas. 
+Missão:
+Nossa missão é revolucionar o mundo financeiro, tornando-o mais acessível, transparente e eficiente para todos. Através de nossos serviços e produtos, buscamos capacitar nossos clientes a alcançarem seus objetivos financeiros, proporcionando-lhes uma experiência única e confiável, pautada em princípios éticos e de responsabilidade social.
 
-**Lembre-se:** a Landing Page é a primeira página de um site institucional e deve ter apenas **uma página html com seções diferentes**, ser atrativa para clientes, fornecendo informações sobre a empresa e seus produtos/serviços. 
+Visão:
+Na F4BANK, vislumbramos um futuro em que as barreiras financeiras sejam superadas e a inclusão financeira seja uma realidade para todos os indivíduos e empresas. Com inovação contínua e uma equipe altamente talentosa, almejamos nos tornar líderes globais no setor, sendo reconhecidos pela excelência em nossos serviços, ética empresarial e impacto positivo na sociedade.
 
-As empresas fictícias vão desde um banco digital a uma empresa de seguros, passando por um serviço de aluguel de repúblicas para estudantes universitários e uma plataforma de crédito para pessoas empreendedoras de periferia. 
+Valores:
 
-É importante que a página seja construída com criatividade, então não se limite às características fornecidas sobre as empresas fictícias. Para ajudar no desenvolvimento da página, foram disponibilizadas referências de outras Landing Pages; use-as como inspiração!
+Excelência: Buscamos a excelência em tudo o que fazemos, desde a qualidade de nossos produtos e serviços até o atendimento ao cliente e suporte técnico.
+Integridade: Agimos com honestidade, transparência e ética, estabelecendo relações de confiança com nossos clientes, colaboradores e parceiros de negócios.
+Inovação: Abraçamos a inovação tecnológica como uma força propulsora para o crescimento e aprimoramento contínuo de nossos serviços.
+Colaboração: Valorizamos a diversidade e incentivamos a colaboração entre nossa equipe, promovendo um ambiente de trabalho inclusivo e enriquecedor.
+Responsabilidade Social: Comprometemo-nos a contribuir positivamente para a sociedade, apoiando iniciativas e projetos que promovam a educação financeira e o desenvolvimento sustentável.
+Serviços:
 
+Contas Bancárias Personalizadas: Oferecemos uma ampla variedade de contas bancárias adaptadas às necessidades específicas de nossos clientes, proporcionando flexibilidade e conveniência nas transações financeiras do dia-a-dia.
+Investimentos Inteligentes: Nossa equipe de especialistas em investimentos orienta os clientes na tomada de decisões financeiras inteligentes, ajudando-os a alcançar seus objetivos de longo prazo e a maximizar seus retornos financeiros.
+Empréstimos e Créditos: Proporcionamos soluções de crédito sob medida para atender às necessidades de financiamento de projetos pessoais e empresariais, com taxas competitivas e processos ágeis.
+Serviços de Pagamentos Internacionais: Facilitamos transferências de dinheiro para diferentes países, de forma segura e eficiente, permitindo que nossos clientes conduzam negócios internacionais com confiança.
+Plataforma Digital Avançada: Nossa plataforma online e aplicativo móvel oferecem uma experiência bancária simplificada, garantindo acesso rápido e fácil aos serviços, além de funcionalidades inovadoras.
+Junte-se à F4BANK hoje e experimente uma nova era de soluções financeiras inteligentes, impulsionando seu sucesso e prosperidade financeira. Seja bem-vindo(a) à revolução financeira!
 
-<details>
-   <summary>Empresas fictícias</summary>
-   
+***** PRINTS DAS PAGINAS *****
 
-#### Projeto F4Bank
-
-  O F4Bank é um projeto de um grande banco público brasileiro para competir com as startups que tem surgido, como Nubank, Banco Inter e Banco Neon. Você precisa criar uma landing page que comunique, além da proposta do banco, os produtos "Cartão sem taxa" e "Conta corrente digital", reforçando a segurança de um banco tradicional com décadas de história no país.
-
-[Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
-  
-
-#### Projeto 4Food
-
-  O 4Food é um projeto de uma grande rede de supermercados que está buscando se digitalizar e criar um sistema de compras e entregas recorrentes por aplicativo. Você precisa criar uma landing page que comunique a velocidade e praticidade da solução, destacando a possibilidade de realizar (i) compras de supermercado online e (ii) compras de comidas prontas com uma frequência semanal.
-
-[Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
-  
-
-#### Projeto 4Comfort
-
-  4Comfort é uma nova empresa cuja proposta é oferecer o tênis mais confortável possível. Seguindo modelos americanos como Allbirds e Atom, o tênis é voltado para um público que trabalha em ambientes casuais (startups, empresas de tecnologia, escritórios modernos etc.) e se destaca por ser vendido exclusivamente online.
-
-[Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
-  
-
-#### Projeto F4Life
-
-  F4Life é uma empresa de aluguéis de repúblicas para pessoas universitárias. Similar aos modelos de Quinto Andar e Loft, a empresa realiza reformas e prepara moradias para recepção de pessoas universitárias em um ambiente específico e otimizado para a vida de graduação. Você precisa criar uma landing page que chame a atenção de pessoas que estão na graduação e ofereça os produtos "moradia compartilhada" e "kitnets".
-
-[Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
-  
-
-#### Projeto Upfour.
-
-  A Upfour é uma empresa que fornece crédito para moradores da periferia começarem seu próprio negócio. Similar a modelos como Creditas, mas concentrado apenas em moradores de periferia, a empresa oferece dois serviços: (i) crédito pessoal ; (ii) sistema de controle e orientação financeira. Você precisa construir um site capaz de atingir esse público em específico, reforçando a oportunidade de mudança de vida e de tornar-se protagonista em seu contexto social.
-
-[Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
+![image](https://github.com/DavidBrito32/projeto-landing-page/assets/125412383/9984c34c-e2fe-4287-a80b-300c9532042c)
 
 
-#### Projeto Log4
+![image](https://github.com/DavidBrito32/projeto-landing-page/assets/125412383/57e8ea9c-2ff5-4eb5-b222-129e399413d0)
 
-  A Log4 é uma empresa de uma grande varejista que, após liderar o mercado de móveis, cama, mesa e banho, resolveu entrar no mercado puro de logística para competir com empresas como Loggi e MadeiraMadeira. Seus dois principais produtos são (i) a distribuição rápida de itens pequenos via motoboys/ciclistas e (ii) a distribuição rápida de móveis ou itens de grande tamanho. Você precisa criar um site capaz de comunicar a tradição e confiança do grupo varejista, mas também se posicionar como uma nova solução de tecnologia que traz velocidade aos clientes.
+![image](https://github.com/DavidBrito32/projeto-landing-page/assets/125412383/209905cc-336b-4198-80c5-40dcbd639460)
 
-[Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
- 
+![image](https://github.com/DavidBrito32/projeto-landing-page/assets/125412383/c0431654-bbeb-4f22-9ccc-e1d3924e4df4)
 
-#### Projeto 4Cars
+Muito Obrigado pela visita a minha pagina....
 
-  A 4Cars é uma empresa que tem surfado na onda dos apps de motoristas. Sua proposta é oferecer carros para serem alugados por motoristas a um custo razoável, aumentando a oportunidade para quem não têm dinheiro para comprar um carro. Seus concorrentes atuais são empresas tradicionais, como Localiza, e startups, como Kovi. Você tem duas linhas de produto: (i) carros populares e (ii) transporte de luxo. Você precisa criar um site capaz de comunicar modernidade e baixo custo, se posicionando como uma plataforma totalmente digital e de fácil acesso para motoristas jovens que estão buscando entrar nesse mercado.
- 
- [Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
 
-#### Projeto 4Safe
 
-  A 4Safe é uma empresa focada na digitalização dos produtos de seguridade. Sua proposta é oferecer seguros de vida, de carro e outros para clientes jovens que não gostam da burocracia das seguradoras tradicionais (ex: Porto Seguro). Você tem duas linhas de produto para desenvolver: (i) seguro de vida e (ii) seguro de carro. É importante comunicar um tom jovem, mas, ao mesmo tempo, passando bastante segurança para seus clientes, dada a natureza do produto.
-  
-  [Logo aqui](https://labenu.notion.site/Projeto-Landing-Page-WFS-7b37ff1460e741b1b5e1e049d7df9d69)
-   </details>
-O enunciado completo está no Sistema de Estudante, na sessão de Projetos https://estudante.labenu.com.br/conteudos/tecnico/projetos
 
-## Lista de requisitos
-A sua Landing Page deve conter:
-
-- [ ] **Uma seção inicial ou principal:** Esta é a seção que visitantes vêem primeiro quando acessam seu site. 
-	
-- [ ] **Logomarca:** A logomarca fornecida pelo cliente, que deve ser apresentada de forma clara e em um local estratégico da página.	
-
-- [ ] **Paleta de cores:** Uma paleta de cores baseada na logomarca fornecida pelo cliente.	
-
-- [ ] **Cabeçalho e Rodapé:** O cabeçalho deve conter informações importantes sobre a sua empresa, como  botões de navegação e opções de contato. Já o rodapé pode incluir informações adicionais, como endereço e links de redes sociais.
-
-- [ ] **Redes Sociais:** Incluir pelo menos  2 ícones para redes sociais, visíveis e clicáveis.	
-
-- [ ] **Formulário de Contato:** Inclua um formulário de contato para que os visitantes possam se comunicar com a empresa fictícia. O formulário deverá solicitar, no mínimo, um e-mail para contato. (veja um exemplo nesse vídeo: https://coda.io/d/_duQBJ-J3TJr/Funcionalidades_suFtt#_lu2rX)
-
-- [ ] **Responsividade:** Sua landing page deve ser responsiva e adaptável a diferentes tamanhos de tela, como smartphones e desktops. Além disso, é importante testar sua landing page em diferentes dispositivos, como o iPhone 6/7/8 para a versão mobile, e em uma tela de 1280px de largura para a versão desktop.
-
-- [ ] **Botões:** Todos os botões devem estar funcionando com alguma lógica javascript.	
-
-- [ ] **Seções:** Conter, pelo menos, 2 seções diferentes.	
-    <details>
-       <summary>Sugestões de Seção (você não precisa se limitar a elas)</summary>
-        * Quem somos
-        * Nossos produtos/serviços
-        * Contato
-        * Nosso time
-        * Trabalhe conosco
-        * Cases de sucesso
-        * Onde estamos
-        * FAQ/Perguntas Frequentes
-        * Promoções
-    </details>
-- [ ] Deploy: O site deve estar publicado na internet através do surge ou outra ferramenta.
-### Instruções para preparar o seu repositório
-
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-landing-page`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Não faça as alterações direto na branch ```main```!
-
-### Instruções de entrega
-
-![image](https://user-images.githubusercontent.com/71137294/227530610-a9172cf5-a346-49ec-ac76-e95b207f97b4.png)
-1.  [Crie o surge](https://vimeo.com/534588331/cb38435bad?embedded=true&source=vimeo_logo&owner=108074337) do seu projeto e pegue o link da publicação(deploy);
-2.  Adicione o link do surge no README do seu projeto;
-3.  Tire print das páginas do seu projeto, na versão desktop e mobile e cole no README;
-4.  Abra um novo Pull Request (PR) com a frase **PR para correção**. Caso não saiba como fazê-lo, assista a esse [vídeo](https://www.canva.com/design/DAFY4nS5W2c/t92uFMR61YtmA7bCwj2S1Q/watch).
-5.  Envie o link do seu PR e do surge no [formulário de entrega](https://forms.gle/nrh5KpDhAMwXBjC29).
 
