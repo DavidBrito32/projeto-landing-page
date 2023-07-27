@@ -183,9 +183,7 @@ main .servicos .imagem h1 {
   width: 50%;
   letter-spacing: 2px;
   font-size: 28px;
-  background-image: linear-gradient(to right, rgb(77, 215, 2), white);
-  color: transparent;
-  -webkit-background-clip: text;
+  color: black;
   position: absolute;
   right: 20px;
   top: 95px;
@@ -335,7 +333,7 @@ main .formulario form {
   gap: 20px;
   padding: 20px;
   background-color: #383939;
-  border: 3px dashed #991818;
+  border: 3px dashed #ff8000;
   box-shadow: 1px 10px 30px black;
   position: absolute;
   right: 100px;
@@ -395,12 +393,15 @@ main .formulario form button {
   margin: 0 auto;
   height: 60px;
   border-radius: 12px;
-  background-color: #5b0465;
+  background-color: orange;
   color: white;
   font-weight: bold;
   outline: none;
   border: none;
   cursor: pointer;
+}
+main .formulario form button:hover {
+  background-color: rgb(175, 114, 0);
 }
 main .overlay {
   width: 100%;
@@ -488,7 +489,7 @@ main .acessar-conta form .btn-conta {
   width: 100%;
   height: 40px;
   text-align: center;
-  background-color: blue;
+  background-color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,7 +497,7 @@ main .acessar-conta form .btn-conta {
   cursor: pointer;
 }
 main .acessar-conta form .btn-conta:hover {
-  background-color: rgb(64, 96, 14);
+  background-color: rgb(164, 112, 15);
 }
 main .acessar-conta form .btn-conta:active a {
   color: #491313;
@@ -507,12 +508,15 @@ main .acessar-conta form input {
   border-radius: 6px;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   padding-left: 20px;
   background-color: gray;
   color: white;
+}
+main .acessar-conta form input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6235294118);
+}
+main .acessar-conta form input::placeholder {
+  color: rgba(255, 255, 255, 0.6235294118);
 }
 
 @keyframes background {
@@ -1129,8 +1133,9 @@ footer .direitos p {
     font-size: 1.7rem;
   }
   main .banner .imagem {
-    width: 55%;
-    height: 45%;
+    width: 60%;
+    height: 55%;
+    right: -35px;
   }
   main .servicos {
     position: relative;
@@ -1138,7 +1143,7 @@ footer .direitos p {
   }
   main .servicos .imagem {
     width: 55%;
-    height: 70%;
+    height: 65%;
     left: 0;
   }
   main .servicos .imagem h1 {
@@ -1173,7 +1178,7 @@ footer .direitos p {
     right: 0%;
   }
   main .formulario .beneficions .examples {
-    width: 45%;
+    width: 50%;
     height: 25em;
     left: 2%;
   }
@@ -1273,7 +1278,7 @@ footer .direitos p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1300px) {
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -1321,7 +1326,7 @@ footer .direitos p {
   }
   main .banner .imagem {
     width: 50%;
-    height: 30em;
+    height: 70%;
   }
   main .servicos {
     position: relative;
@@ -1332,32 +1337,42 @@ footer .direitos p {
   }
   main .servicos .imagem h1 {
     top: 10%;
+    right: 8%;
+    width: 30%;
+    font-size: 1.8rem;
   }
   main .servicos .imagem .empresas {
     top: 58%;
+    left: 62%;
+    width: 30%;
   }
   main .servicos .imagem img {
-    width: 14em;
-    height: 14em;
+    width: 60%;
+    height: 45%;
+    left: 0;
+  }
+  main .servicos .imagem .imagem2 {
+    top: 50%;
+    left: 0%;
   }
   main .servicos .pagamentos {
-    width: 17em;
-    height: 17em;
+    width: 45%;
+    height: 45%;
     position: absolute;
     top: 3%;
     right: 5em;
   }
   main .servicos .app {
-    width: 17em;
-    height: 17em;
+    width: 45%;
+    height: 45%;
     position: absolute;
-    top: 52%;
+    top: 50%;
     right: 5em;
   }
   main .formulario .beneficions .examples {
-    width: 40%;
-    height: 80%;
-    left: 5%;
+    width: 48%;
+    height: 90%;
+    left: 2%;
   }
   main .formulario form {
     width: 40%;
@@ -1365,7 +1380,7 @@ footer .direitos p {
     right: 5%;
   }
 }
-@media only screen and (min-width: 1301px) {
+@media only screen and (min-width: 1401px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -1411,54 +1426,55 @@ footer .direitos p {
     font-size: 2.3rem;
   }
   main .banner .imagem {
-    width: 35%;
-    height: 60%;
+    width: 40%;
+    height: 70%;
   }
   main .servicos {
     position: relative;
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 35%;
-    height: 70%;
+    width: 45%;
+    height: 100%;
   }
   main .servicos .imagem h1 {
     width: 40%;
-    right: 0px;
+    right: 10px;
     top: 10%;
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
   main .servicos .imagem .empresas {
     top: 58%;
     left: 10%;
+    font-size: 2rem;
   }
   main .servicos .imagem img {
-    width: 15em;
-    height: 14em;
+    width: 45%;
+    height: 45%;
     left: 10px;
+    top: 10px;
   }
   main .servicos .imagem .imagem2 {
     left: 50%;
   }
   main .servicos .pagamentos {
-    margin-left: 2em;
-    width: 30%;
-    height: 60%;
+    margin-left: 0.5em;
+    width: 27%;
+    height: 45%;
   }
   main .servicos .app {
-    margin-left: 1.5em;
-    width: 30%;
-    height: 60%;
+    width: 27%;
+    height: 45%;
   }
   main .formulario .beneficions .examples {
-    width: 34em;
-    height: 40em;
-    left: 20%;
+    width: 40%;
+    height: 90%;
+    left: 5%;
   }
   main .formulario form {
     width: 34em;
-    height: 40em;
-    right: 15%;
+    height: 90%;
+    right: 5%;
   }
 }
 * {

@@ -588,8 +588,9 @@
       }
 
       .imagem {
-        width: 55%;
-        height: 45%;
+        width: 60%;
+        height: 55%;
+        right: -35px;
       }
     } //-> OK
 
@@ -598,7 +599,7 @@
       justify-content: left;
       .imagem {
         width: 55%;
-        height: 70%;
+        height: 65%;
         left: 0;
 
         h1 {
@@ -643,7 +644,7 @@
     .formulario {
       .beneficions {
         .examples {
-          width: 45%;
+          width: 50%;
           height: 25em;
           left: 2%;
         }
@@ -764,7 +765,7 @@
   }
 } //-> OK
 
-@media only screen and (min-width: 769px) and (max-width: 1300px) {
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -816,7 +817,7 @@
 
       .imagem {
         width: 50%;
-        height: 30em;
+        height: 70%;
       }
     }
 
@@ -828,31 +829,42 @@
 
         h1 {
           top: 10%;
+          right: 8%;
+          width: 30%;
+          font-size: 1.8rem;
         }
 
         .empresas {
           top: 58%;
+          left: 62%;
+          width: 30%;
         }
 
         img {
-          width: 14em;
-          height: 14em;
+          width: 60%;
+          height: 45%;
+          left: 0;
+        }
+
+        .imagem2{
+          top: 50%;
+          left: 0%;
         }
       }
 
       .pagamentos {
-        width: 17em;
-        height: 17em;
+        width: 45%;
+        height: 45%;
         position: absolute;
         top: 3%;
         right: 5em;
       }
 
       .app {
-        width: 17em;
-        height: 17em;
+        width: 45%;
+        height: 45%;
         position: absolute;
-        top: 52%;
+        top: 50%;
         right: 5em;
       }
     }
@@ -860,9 +872,9 @@
     .formulario {
       .beneficions {
         .examples {
-          width: 40%;
-          height: 80%;
-          left: 5%;
+          width: 48%;
+          height: 90%;
+          left: 2%;
         }
       }
 
@@ -875,7 +887,7 @@
   }
 }
 
-@media only screen and (min-width: 1301px) {
+@media only screen and (min-width: 1401px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -925,8 +937,8 @@
       }
 
       .imagem {
-        width: 35%;
-        height: 60%;
+        width: 40%;
+        height: 70%;
       }
     }
 
@@ -934,25 +946,27 @@
       position: relative;
       justify-content: left;
       .imagem {
-        width: 35%;
-        height: 70%;
+        width: 45%;
+        height: 100%;
 
         h1 {
           width: 40%;
-          right: 0px;
+          right: 10px;
           top: 10%;
-          font-size: 1.3rem;
+          font-size: 2rem;
         }
 
         .empresas {
           top: 58%;
           left: 10%;
+          font-size: 2rem;
         }
 
         img {
-          width: 15em;
-          height: 14em;
+          width: 45%;
+          height: 45%;
           left: 10px;
+          top: 10px;
         }
 
         .imagem2 {
@@ -961,31 +975,30 @@
       }
 
       .pagamentos {
-        margin-left: 2em;
-        width: 30%;
-        height: 60%;
+        margin-left: 0.5em;
+        width: 27%;
+        height: 45%;
       }
 
       .app {
-        margin-left: 1.5em;
-        width: 30%;
-        height: 60%;
+        width: 27%;
+        height: 45%;
       }
     }
 
     .formulario {
       .beneficions {
         .examples {
-          width: 34em;
-          height: 40em;
-          left: 20%;
+          width: 40%;
+          height: 90%;
+          left: 5%;
         }
       }
 
       form {
         width: 34em;
-        height: 40em;
-        right: 15%;
+        height: 90%;
+        right: 5%;
       }
     }
   }
