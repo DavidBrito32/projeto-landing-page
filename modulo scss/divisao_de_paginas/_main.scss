@@ -109,11 +109,7 @@ overflow-x: hidden;
                 width: 50%;
                 letter-spacing: 2px;
                 font-size: 28px;
-                background-image: linear-gradient(
-                to right, rgb(77, 215, 2), white
-                );
-                color: transparent;
-                -webkit-background-clip: text;
+                color: black;
                 position: absolute;
                 right: 20px;
                 top: 95px;
@@ -290,7 +286,7 @@ overflow-x: hidden;
                 gap: 20px;
                 padding: 20px;
                 background-color: #383939;
-                border: 3px dashed #991818;
+                border: 3px dashed #ff8000;
                 box-shadow: 1px 10px 30px black;
                 position: absolute;
                 right: 100px;
@@ -349,12 +345,16 @@ overflow-x: hidden;
                         margin: 0 auto;
                         height: 60px;
                         border-radius: 12px;
-                        background-color: #5b0465;
+                        background-color: orange;
                         color: white;
                         font-weight: bold;
                         outline: none;
                         border: none;
                         cursor: pointer;
+
+                            &:hover{
+                                background-color: rgb(175, 114, 0);
+                            }
                     }
             }
     }
@@ -453,7 +453,7 @@ overflow-x: hidden;
                         width: 100%;
                         height: 40px;
                         text-align: center;
-                        background-color: blue;   
+                        background-color: orange;   
                         display: flex;  
                         justify-content: center;
                         align-items: center;
@@ -461,7 +461,7 @@ overflow-x: hidden;
                         cursor: pointer;
 
                             &:hover{
-                                background-color: rgb(64, 96, 14);
+                                background-color: rgb(164, 112, 15);
                             }
 
                             &:active{
@@ -477,10 +477,13 @@ overflow-x: hidden;
                             border-radius: 6px;
                             border: none;
                             outline: none;
-                            appearance: none;
                             padding-left: 20px;
                             background-color: gray;
                             color: white;
+
+                                &::placeholder{
+                                    color: #ffffff9f;
+                                }
                         }
                 }
     }
