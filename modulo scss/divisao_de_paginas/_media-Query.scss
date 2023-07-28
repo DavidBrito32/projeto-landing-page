@@ -141,7 +141,7 @@
           width: 6rem;
           letter-spacing: 2px;
           font-size: 0.8rem;
-          background-image: linear-gradient(to right, rgb(215, 194, 2), white);
+          background-image: linear-gradient(to right, rgb(215, 194, 2), rgb(206, 104, 2));
           color: transparent;
           -webkit-background-clip: text;
           position: absolute;
@@ -172,7 +172,9 @@
           width: 8rem;
           letter-spacing: 2px;
           font-size: 0.8rem;
-          color: rgb(244, 185, 59);
+          background-image: linear-gradient(to right, rgb(215, 194, 2), rgb(206, 104, 2));
+          color: transparent;
+          -webkit-background-clip: text;
           position: absolute;
           left: 5px;
           top: 205px;
@@ -336,7 +338,6 @@
           margin: 0 auto;
           height: 50px;
           border-radius: 12px;
-          background-color: #5b0465;
           color: white;
           font-weight: bold;
           outline: none;
@@ -344,6 +345,110 @@
           cursor: pointer;
           font-size: 1.2rem;
         }
+      }
+    }
+    .succes{
+      width: 90%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1{
+        font-size: 1rem;
+          p{
+            font-size: 1rem;
+          }
+      }
+
+      .circulo{
+        width: 80px;
+        height: 80px;
+          .checked{
+            top: 20px;
+          }
+
+          #error{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.active{
+                display: none;
+            }
+            span{
+                width: 0px;
+                position: absolute;
+                height: 5px;
+                background-color: red;
+                border-radius: 14px;
+                top: 50%;
+                left: 10%;
+                rotate: 0deg;
+                overflow: hidden;
+                transition-duration: 400ms;
+
+                    &.active{
+                        visibility: visible;
+                        opacity: 1;
+                        width: 50px;
+                        &:first-child{
+                            transform: rotate(-45deg);
+                            top: 50%;
+                            left: 18%;
+                        }
+    
+                        &:last-child{
+                            top: 50%;
+                            left: 18%;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                
+            }
+        }
+      }
+    }
+
+    .sobre{
+      justify-content: space-around;
+      height: 150vh;
+      h1{
+        font-size: 2rem;
+      }
+
+      &::after{
+        width: 300px;
+        height: 300px;
+        left: 49%;
+      }
+      &::before{
+        width: 300px;
+        height: 300px;
+        top: 70%;
+        left: 49%;
+
+      }
+
+      .sobre-f4bank{
+        flex-direction: column;
+
+          .imagem-sobre{
+            width: 100%;
+            height: 30%;
+              img{
+                width: 100%;
+                height: 80%;
+              }
+          }
+
+          .mensagem{
+            width: 90%;
+
+              p{
+                font-size: 1rem;
+              }
+          }
       }
     }
 
@@ -664,6 +769,40 @@
         }
       }
     }
+
+    .sobre{
+
+      &::after, &::before{
+        width: 400px;
+        height: 400px;
+      }
+
+
+      h1{
+          font-size: 4rem;
+      }
+
+  .sobre-f4bank{
+
+      .imagem-sobre{
+        img{
+          width: 100%;
+          height: 50%;
+        }
+
+      }
+
+      .mensagem{
+        height: auto;
+          p{
+            font-size: 0.7rem;
+          }
+      }
+
+  }
+
+
+}
   }
 
   footer {
@@ -765,7 +904,7 @@
   }
 } //-> OK
 
-@media only screen and (min-width: 769px) and (max-width: 1400px) {
+@media only screen and (min-width: 769px) and (max-width: 999px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -825,24 +964,26 @@
       position: relative;
       justify-content: left;
       .imagem {
-        width: 40em;
+        width: 50%;
 
         h1 {
           top: 10%;
-          right: 8%;
+          right: 5%;
           width: 30%;
-          font-size: 1.8rem;
+          font-size: 1.3rem;
+          color: white;
         }
 
         .empresas {
           top: 58%;
-          left: 62%;
+          left: 66%;
           width: 30%;
+          color: white;
         }
 
         img {
           width: 60%;
-          height: 45%;
+          height: 35%;
           left: 0;
         }
 
@@ -853,16 +994,16 @@
       }
 
       .pagamentos {
-        width: 45%;
-        height: 45%;
+        width: 40%;
+        height: 40%;
         position: absolute;
         top: 3%;
         right: 5em;
       }
 
       .app {
-        width: 45%;
-        height: 45%;
+        width: 40%;
+        height: 40%;
         position: absolute;
         top: 50%;
         right: 5em;
@@ -884,6 +1025,184 @@
         right: 5%;
       }
     }
+
+    .sobre{
+
+
+          h1{
+              font-size: 4rem;
+          }
+
+      .sobre-f4bank{
+
+          .imagem-sobre{
+
+
+          }
+
+          .mensagem{
+            height: auto;
+              p{
+                font-size: 0.7rem;
+              }
+          }
+
+      }
+
+
+  }
+
+
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1400px){
+  header {
+    width: 100vw;
+    height: 13vh;
+    background: linear-gradient(to right, #ff914c, #e79128);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2em;
+
+    .logo {
+      width: 9em;
+      height: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    /*-----------------------------------------------------------------CONFIGURACAO DA NAVBAR-----------------------------------------------------------------*/
+    nav {
+      width: 50%;
+      a {
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        &:hover {
+          color: #d60f62;
+        }
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+      }
+    }
+  }
+
+  main {
+    .banner {
+      width: 100%;
+      max-height: 100vh;
+      .texto {
+        width: 45%;
+
+        h1 {
+          font-size: 2.3rem;
+        }
+      }
+
+      .imagem {
+        width: 50%;
+        height: 70%;
+      }
+    }
+
+    .servicos {
+      position: relative;
+      justify-content: left;
+      .imagem {
+        width: 50%;
+
+        h1 {
+          top: 10%;
+          right: 5%;
+          width: 30%;
+          font-size: 1.3rem;
+          color: white;
+        }
+
+        .empresas {
+          top: 58%;
+          left: 66%;
+          width: 30%;
+          color: white;
+        }
+
+        img {
+          width: 60%;
+          height: 35%;
+          left: 0;
+        }
+
+        .imagem2{
+          top: 50%;
+          left: 0%;
+        }
+      }
+
+      .pagamentos {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        top: 3%;
+        right: 5em;
+      }
+
+      .app {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        top: 50%;
+        right: 5em;
+      }
+    }
+
+    .formulario {
+      .beneficions {
+        .examples {
+          width: 48%;
+          height: 90%;
+          left: 2%;
+        }
+      }
+
+      form {
+        width: 40%;
+        height: 80%;
+        right: 5%;
+      }
+    }
+
+    .sobre{
+          h1{
+              font-size: 4rem;
+          }
+
+      .sobre-f4bank{
+
+          .imagem-sobre{
+
+
+          }
+
+          .mensagem{
+            height: auto;
+              p{
+                font-size: 0.7rem;
+              }
+          }
+
+      }
+
+
+  }
+
+
   }
 }
 
@@ -946,8 +1265,8 @@
       position: relative;
       justify-content: left;
       .imagem {
-        width: 45%;
-        height: 100%;
+        width: 40%;
+        height: 75%;
 
         h1 {
           width: 40%;
@@ -975,12 +1294,13 @@
       }
 
       .pagamentos {
-        margin-left: 0.5em;
+        margin-left: 1em;
         width: 27%;
         height: 45%;
       }
 
       .app {
+        margin-left: 1rem;
         width: 27%;
         height: 45%;
       }
@@ -997,8 +1317,19 @@
 
       form {
         width: 34em;
-        height: 90%;
+        height: 80%;
         right: 5%;
+      }
+    }
+
+    .sobre{
+
+
+      .sobre-f4bank{
+
+        .mensagem{
+          width: 30%;
+        }
       }
     }
   }

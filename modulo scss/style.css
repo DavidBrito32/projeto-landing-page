@@ -403,6 +403,224 @@ main .formulario form button {
 main .formulario form button:hover {
   background-color: rgb(175, 114, 0);
 }
+main .succes {
+  position: fixed;
+  width: 700px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.5215686275);
+  border-radius: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 400ms;
+}
+main .succes #error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .succes #error.active {
+  display: none;
+}
+main .succes #error span {
+  width: 0px;
+  position: absolute;
+  height: 8px;
+  background-color: red;
+  border-radius: 14px;
+  top: 50%;
+  left: 10%;
+  rotate: 0deg;
+  overflow: hidden;
+  transition-duration: 400ms;
+}
+main .succes #error span.active {
+  visibility: visible;
+  opacity: 1;
+  width: 80px;
+}
+main .succes #error span.active:first-child {
+  transform: rotate(-45deg);
+  top: 50%;
+  left: 10%;
+}
+main .succes #error span.active:last-child {
+  top: 50%;
+  left: 10%;
+  transform: rotate(45deg);
+}
+main .succes.active {
+  visibility: visible;
+  opacity: 1;
+}
+main .succes h1 {
+  width: 0%;
+  height: 150px;
+  color: rgb(29, 95, 5);
+  overflow: hidden;
+  transition-delay: 500ms;
+  transition-duration: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+main .succes h1 p {
+  overflow: hidden;
+  width: 0;
+  transition-duration: 1s;
+  color: rgb(95, 5, 91);
+  font-size: 1.5rem;
+}
+main .succes h1 p.active {
+  width: 100%;
+}
+main .succes h1.active {
+  width: 60%;
+}
+main .succes #erro {
+  position: absolute;
+  right: 10%;
+  top: 60%;
+  width: 0%;
+  color: red;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 400ms;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+main .succes #erro.active {
+  width: 80%;
+  visibility: visible;
+  opacity: 1;
+}
+main .succes span {
+  color: rgb(255, 0, 0);
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+main .succes span:hover {
+  background-color: orangered;
+  color: yellow;
+}
+main .succes .circulo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 400ms;
+}
+main .succes .circulo .checked {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 25px;
+  transition-duration: 400ms;
+  transition-delay: 500ms;
+}
+main .succes .circulo .checked.active {
+  width: 60%;
+  height: 40%;
+  border-bottom: 10px solid green;
+  border-left: 10px solid green;
+  transform: rotate(-40deg);
+}
+main .sobre {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(98, 65, 11, 0.5607843137);
+  position: relative;
+}
+main .sobre::after {
+  position: absolute;
+  content: "";
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.641);
+  z-index: -1;
+  left: 35%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .sobre::before {
+  position: absolute;
+  content: "";
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: rgb(255, 106, 0);
+  z-index: -1;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .sobre h1 {
+  width: 100%;
+  color: orange;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 10px 10px 10px rgb(184, 184, 6);
+}
+main .sobre .sobre-f4bank {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+main .sobre .sobre-f4bank .imagem-sobre {
+  width: 40%;
+  height: 60%;
+  background-color: rgba(117, 83, 3, 0.4);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .sobre .sobre-f4bank .imagem-sobre img {
+  display: block;
+  width: 70%;
+  border-radius: 12px;
+  box-shadow: 1px 10px 40px rgb(0, 0, 0);
+}
+main .sobre .sobre-f4bank .mensagem {
+  width: 45%;
+  color: white;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: justify;
+}
 main .overlay {
   width: 100%;
   height: 100%;
@@ -737,7 +955,7 @@ footer .direitos p {
     width: 6rem;
     letter-spacing: 2px;
     font-size: 0.8rem;
-    background-image: linear-gradient(to right, rgb(215, 194, 2), white);
+    background-image: linear-gradient(to right, rgb(215, 194, 2), rgb(206, 104, 2));
     color: transparent;
     -webkit-background-clip: text;
     position: absolute;
@@ -765,7 +983,9 @@ footer .direitos p {
     width: 8rem;
     letter-spacing: 2px;
     font-size: 0.8rem;
-    color: rgb(244, 185, 59);
+    background-image: linear-gradient(to right, rgb(215, 194, 2), rgb(206, 104, 2));
+    color: transparent;
+    -webkit-background-clip: text;
     position: absolute;
     left: 5px;
     top: 205px;
@@ -918,13 +1138,101 @@ footer .direitos p {
     margin: 0 auto;
     height: 50px;
     border-radius: 12px;
-    background-color: #5b0465;
     color: white;
     font-weight: bold;
     outline: none;
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
+  }
+  main .succes {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .succes h1 {
+    font-size: 1rem;
+  }
+  main .succes h1 p {
+    font-size: 1rem;
+  }
+  main .succes .circulo {
+    width: 80px;
+    height: 80px;
+  }
+  main .succes .circulo .checked {
+    top: 20px;
+  }
+  main .succes .circulo #error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .succes .circulo #error.active {
+    display: none;
+  }
+  main .succes .circulo #error span {
+    width: 0px;
+    position: absolute;
+    height: 5px;
+    background-color: red;
+    border-radius: 14px;
+    top: 50%;
+    left: 10%;
+    rotate: 0deg;
+    overflow: hidden;
+    transition-duration: 400ms;
+  }
+  main .succes .circulo #error span.active {
+    visibility: visible;
+    opacity: 1;
+    width: 50px;
+  }
+  main .succes .circulo #error span.active:first-child {
+    transform: rotate(-45deg);
+    top: 50%;
+    left: 18%;
+  }
+  main .succes .circulo #error span.active:last-child {
+    top: 50%;
+    left: 18%;
+    transform: rotate(45deg);
+  }
+  main .sobre {
+    justify-content: space-around;
+    height: 150vh;
+  }
+  main .sobre h1 {
+    font-size: 2rem;
+  }
+  main .sobre::after {
+    width: 300px;
+    height: 300px;
+    left: 49%;
+  }
+  main .sobre::before {
+    width: 300px;
+    height: 300px;
+    top: 70%;
+    left: 49%;
+  }
+  main .sobre .sobre-f4bank {
+    flex-direction: column;
+  }
+  main .sobre .sobre-f4bank .imagem-sobre {
+    width: 100%;
+    height: 30%;
+  }
+  main .sobre .sobre-f4bank .imagem-sobre img {
+    width: 100%;
+    height: 80%;
+  }
+  main .sobre .sobre-f4bank .mensagem {
+    width: 90%;
+  }
+  main .sobre .sobre-f4bank .mensagem p {
+    font-size: 1rem;
   }
   main .acessar-conta {
     width: 100%;
@@ -1193,6 +1501,23 @@ footer .direitos p {
   main .formulario form label {
     font-size: 0.8rem;
   }
+  main .sobre::after, main .sobre::before {
+    width: 400px;
+    height: 400px;
+  }
+  main .sobre h1 {
+    font-size: 4rem;
+  }
+  main .sobre .sobre-f4bank .imagem-sobre img {
+    width: 100%;
+    height: 50%;
+  }
+  main .sobre .sobre-f4bank .mensagem {
+    height: auto;
+  }
+  main .sobre .sobre-f4bank .mensagem p {
+    font-size: 0.7rem;
+  }
   footer {
     max-width: 100vw;
     box-sizing: border-box;
@@ -1278,7 +1603,7 @@ footer .direitos p {
     font-size: 1.5rem;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1400px) {
+@media only screen and (min-width: 769px) and (max-width: 999px) {
   header {
     width: 100vw;
     height: 13vh;
@@ -1333,22 +1658,24 @@ footer .direitos p {
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 40em;
+    width: 50%;
   }
   main .servicos .imagem h1 {
     top: 10%;
-    right: 8%;
+    right: 5%;
     width: 30%;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    color: white;
   }
   main .servicos .imagem .empresas {
     top: 58%;
-    left: 62%;
+    left: 66%;
     width: 30%;
+    color: white;
   }
   main .servicos .imagem img {
     width: 60%;
-    height: 45%;
+    height: 35%;
     left: 0;
   }
   main .servicos .imagem .imagem2 {
@@ -1356,15 +1683,15 @@ footer .direitos p {
     left: 0%;
   }
   main .servicos .pagamentos {
-    width: 45%;
-    height: 45%;
+    width: 40%;
+    height: 40%;
     position: absolute;
     top: 3%;
     right: 5em;
   }
   main .servicos .app {
-    width: 45%;
-    height: 45%;
+    width: 40%;
+    height: 40%;
     position: absolute;
     top: 50%;
     right: 5em;
@@ -1378,6 +1705,128 @@ footer .direitos p {
     width: 40%;
     height: 80%;
     right: 5%;
+  }
+  main .sobre h1 {
+    font-size: 4rem;
+  }
+  main .sobre .sobre-f4bank .mensagem {
+    height: auto;
+  }
+  main .sobre .sobre-f4bank .mensagem p {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  header {
+    width: 100vw;
+    height: 13vh;
+    background: linear-gradient(to right, #ff914c, #e79128);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 2em;
+    /*-----------------------------------------------------------------CONFIGURACAO DA NAVBAR-----------------------------------------------------------------*/
+  }
+  header .logo {
+    width: 9em;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  header nav {
+    width: 50%;
+  }
+  header nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  header nav a:hover {
+    color: #d60f62;
+  }
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  main .banner {
+    width: 100%;
+    max-height: 100vh;
+  }
+  main .banner .texto {
+    width: 45%;
+  }
+  main .banner .texto h1 {
+    font-size: 2.3rem;
+  }
+  main .banner .imagem {
+    width: 50%;
+    height: 70%;
+  }
+  main .servicos {
+    position: relative;
+    justify-content: left;
+  }
+  main .servicos .imagem {
+    width: 50%;
+  }
+  main .servicos .imagem h1 {
+    top: 10%;
+    right: 5%;
+    width: 30%;
+    font-size: 1.3rem;
+    color: white;
+  }
+  main .servicos .imagem .empresas {
+    top: 58%;
+    left: 66%;
+    width: 30%;
+    color: white;
+  }
+  main .servicos .imagem img {
+    width: 60%;
+    height: 35%;
+    left: 0;
+  }
+  main .servicos .imagem .imagem2 {
+    top: 50%;
+    left: 0%;
+  }
+  main .servicos .pagamentos {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 3%;
+    right: 5em;
+  }
+  main .servicos .app {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    right: 5em;
+  }
+  main .formulario .beneficions .examples {
+    width: 48%;
+    height: 90%;
+    left: 2%;
+  }
+  main .formulario form {
+    width: 40%;
+    height: 80%;
+    right: 5%;
+  }
+  main .sobre h1 {
+    font-size: 4rem;
+  }
+  main .sobre .sobre-f4bank .mensagem {
+    height: auto;
+  }
+  main .sobre .sobre-f4bank .mensagem p {
+    font-size: 0.7rem;
   }
 }
 @media only screen and (min-width: 1401px) {
@@ -1434,8 +1883,8 @@ footer .direitos p {
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 45%;
-    height: 100%;
+    width: 40%;
+    height: 75%;
   }
   main .servicos .imagem h1 {
     width: 40%;
@@ -1458,11 +1907,12 @@ footer .direitos p {
     left: 50%;
   }
   main .servicos .pagamentos {
-    margin-left: 0.5em;
+    margin-left: 1em;
     width: 27%;
     height: 45%;
   }
   main .servicos .app {
+    margin-left: 1rem;
     width: 27%;
     height: 45%;
   }
@@ -1473,8 +1923,11 @@ footer .direitos p {
   }
   main .formulario form {
     width: 34em;
-    height: 90%;
+    height: 80%;
     right: 5%;
+  }
+  main .sobre .sobre-f4bank .mensagem {
+    width: 30%;
   }
 }
 * {
