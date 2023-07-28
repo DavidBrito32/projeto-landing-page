@@ -29,7 +29,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#servicos">Servicos</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a href="#!">Sobre</a></li>
+        <li><a href="#sobre">Sobre</a></li>
         <li id="abreConta"><a href="#!">Acesse sua conta</a></li>
       </ul>
     </nav>
@@ -69,11 +69,11 @@
             <img src="images/models/mande sua dúvida entre em contato telefone mensagem celular instagram post .png" alt="Projecoes">
           </div>
         </div>
-          <form>
+          <form id="fcForm">
             <h1>Entre em contato conosco</h1>
   
-            <label for="name">Informe seu nome:</label>
-            <input type="text" name="name" id="name" placeholder="Digite seu nome:" required>
+            <label for="nameInput">Informe seu nome:</label>
+            <input type="text" name="name" id="nameInput" placeholder="Digite seu nome:" required>
   
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" placeholder="Digite seu E-mail:" required>
@@ -81,12 +81,49 @@
             <label for="mensagem">Insira sua mensagem:</label>
             <textarea name="mensagem" id="mensagem" cols="20" rows="5" placeholder="Insira sua mensagem"></textarea>
   
-            <button>Enviar</button>
+            <button id="enviarMensagem">Enviar</button>
           </form>
 
         
     </section>
 
+    <section id="sobre" class="sobre">
+      <h1>Sobre o F4BANK</h1>
+
+      <div class="sobre-f4bank">
+        <div class="imagem-sobre">
+          <img src="images/banner-sobre.jpg" alt="sobre">
+        </div>
+        <div class="mensagem">
+          <p>A F4BANK é uma instituição financeira inovadora, oferecendo soluções financeiras personalizadas em todo o mundo. Fundada em 2004, destaca-se pelo enfoque visionário, tecnológico e centrado no cliente, promovendo o bem-estar financeiro e a prosperidade dos clientes.
+
+            Missão:
+            Revolucionar o mundo financeiro, tornando-o acessível, transparente e eficiente para todos. Capacitar os clientes a alcançarem seus objetivos financeiros com ética e responsabilidade social.
+            
+            Visão:
+            Um futuro onde as barreiras financeiras sejam superadas, e a inclusão financeira seja uma realidade para todos. Almejam ser líderes globais, reconhecidos pela excelência, ética e impacto positivo na sociedade.
+            
+            Valores:
+            Excelência: Buscam a excelência em produtos, serviços e atendimento ao cliente.
+            Integridade: Agem com honestidade, transparência e ética, construindo relações de confiança.
+            Inovação: Abraçam a inovação tecnológica para o crescimento contínuo.</p>
+        </div>
+      </div>
+
+
+    </section>
+
+    <div id="succes" class="succes">
+      <span id="fecharMensagem">X</span>
+
+      <div id="circulo" class="circulo">
+        <div id="ativar" class="checked"></div>
+        <div id="error" class="error"><span id="notenvied"></span><span id="notdois"></span></div>
+      </div>
+      <h1 id="show">Sua mensagem foi enviada com sucesso! <br><p id="segunda">Em breve um de nossos consultores entrara em contato com voce!</p></h1>
+      <h1 id="erro">Preencha Corretamente todos os campos!</h1>
+    </div>
+    
     <div id="overlay" class="overlay"></div>
     <div id="conta" class="acessar-conta">
       <form>
