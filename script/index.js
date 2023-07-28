@@ -47,7 +47,8 @@ enviarMensagem.addEventListener('click', (event) => {
             fcForm.reset();
         }else{
             overlay.classList.add('active')
-            succes.classList.add('active');
+            succes.classList.remove('active');
+            succes.classList.add('desactive');
             error.classList.remove('active');
             notenvied.classList.add('active');
             notdois.classList.add('active');
@@ -65,4 +66,5 @@ fecharMensagem.addEventListener('click', () => {
     notenvied.classList.remove('active');
     notdois.classList.remove('active');
     erro.classList.remove('active')
+    succes.classList.remove('desactive');
 })

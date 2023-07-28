@@ -1116,7 +1116,8 @@
       position: relative;
       justify-content: left;
       .imagem {
-        width: 50%;
+        width: 55%;
+        height: 100%;
 
         h1 {
           top: 10%;
@@ -1266,7 +1267,7 @@
       justify-content: left;
       .imagem {
         width: 40%;
-        height: 75%;
+        height: 90%;
 
         h1 {
           width: 40%;
@@ -1323,7 +1324,10 @@
     }
 
     .sobre{
-
+      height: 120vh;
+      h1{
+        font-size: 3.5rem;
+      }
 
       .sobre-f4bank{
 

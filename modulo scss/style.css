@@ -407,7 +407,6 @@ main .succes {
   position: fixed;
   width: 700px;
   height: 400px;
-  background-color: rgba(255, 255, 255, 0.5215686275);
   border-radius: 24px;
   top: 50%;
   left: 50%;
@@ -456,9 +455,15 @@ main .succes #error span.active:last-child {
   left: 10%;
   transform: rotate(45deg);
 }
+main .succes.desactive {
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(241, 69, 69, 0.8078431373);
+}
 main .succes.active {
   visibility: visible;
   opacity: 1;
+  background-color: rgba(137, 177, 107, 0.8078431373);
 }
 main .succes h1 {
   width: 0%;
@@ -491,7 +496,7 @@ main .succes #erro {
   right: 10%;
   top: 60%;
   width: 0%;
-  color: red;
+  color: rgb(42, 11, 11);
   visibility: hidden;
   opacity: 0;
   transition-duration: 400ms;
@@ -1771,7 +1776,8 @@ footer .direitos p {
     justify-content: left;
   }
   main .servicos .imagem {
-    width: 50%;
+    width: 55%;
+    height: 100%;
   }
   main .servicos .imagem h1 {
     top: 10%;
@@ -1884,7 +1890,7 @@ footer .direitos p {
   }
   main .servicos .imagem {
     width: 40%;
-    height: 75%;
+    height: 90%;
   }
   main .servicos .imagem h1 {
     width: 40%;
@@ -1925,6 +1931,12 @@ footer .direitos p {
     width: 34em;
     height: 80%;
     right: 5%;
+  }
+  main .sobre {
+    height: 120vh;
+  }
+  main .sobre h1 {
+    font-size: 3.5rem;
   }
   main .sobre .sobre-f4bank .mensagem {
     width: 30%;
